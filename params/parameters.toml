@@ -62,7 +62,7 @@ enableCvSs = true
 enableNwidWwid = true
 
 # Whether to generate ligation
-enableLigation = true
+enableLigation = false
 
 # Excluded code points
 excludedCharRanges = []
