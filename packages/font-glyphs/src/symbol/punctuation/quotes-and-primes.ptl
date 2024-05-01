@@ -176,12 +176,12 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 	create-glyph 'Saltillo' 0xA78B : glyph-proc
 		local df : include : DivFrame para.diversityF
 		include : df.markSet.capital
-		include : StraightQuoteShape df CAP (0.625 * XH)
+		include : StraightQuoteShape df CAP (0.325 * XH)
 
 	create-glyph 'saltillo' 0xA78C : glyph-proc
 		local df : include : DivFrame para.diversityF
 		include : df.markSet.b
-		include : StraightQuoteShape df Ascender XH
+		include : StraightQuoteShape df Ascender (0.625 * XH)
 
 	create-glyph 'asciiGrave/selector.straight' : glyph-proc
 		local df : include : DivFrame para.diversityF
