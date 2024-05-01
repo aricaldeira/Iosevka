@@ -73,3 +73,12 @@ glyph-block Digits-Three : begin
 				union
 					VBar.r (RightSB - BBD)         (CAP * HBarPos) CAP BBS
 					VBar.r (RightSB - BBD - O * 2) 0 (CAP * HBarPos)   BBS
+
+	# glyph-block-import Letter-Shared : CreateAccentedComposition
+    #
+	# alias 'arabicSezimalDigitThree.lnum' 0xF1EC3 'three.lnum'
+	# CreateAccentedComposition 'arabicNiftimalDigitNine.lnum' 0xF1EC9 'arabicSezimalDigitThree.lnum' 'dotAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitDozenThree.lnum' 0xF1ECF 'arabicSezimalDigitThree.lnum' 'dieresisAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitThirsyThree.lnum' 0xF1ED5 'arabicSezimalDigitThree.lnum' 'ringAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFoursyThree.lnum' 0xF1EDB 'arabicSezimalDigitThree.lnum' 'macronAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFifsyThree.lnum' 0xF1EE1 'arabicSezimalDigitThree.lnum' 'breveAbove'

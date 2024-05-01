@@ -8,6 +8,9 @@ export : define [buildGsubThousands gsub para] : begin
 	define numberGlyphIDs {
 		'zero.lnum' 'one.lnum' 'two.lnum' 'three.lnum' 'four.lnum'
 		'five.lnum' 'six.lnum' 'seven.lnum' 'eight.lnum' 'nine.lnum'
+		'turnDigitTwo' 'turnDigitThree'
+		'sezimalDigitZero.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum'
+		'sezimalDigitThree.lnum' 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum'
 	}
 
 	define [nd s] : numberGlyphIDs.map : lambda [x] "\(x).nd\(s)"
@@ -16,6 +19,7 @@ export : define [buildGsubThousands gsub para] : begin
 		.type 'gsub_chaining'
 		.rules : list
 			chain-rule ({'period'} ~> null) (numberGlyphIDs ~> [nd 2]) (numberGlyphIDs ~> null) (numberGlyphIDs ~> null)
+			chain-rule ({'comma'} ~> null) (numberGlyphIDs ~> [nd 2]) (numberGlyphIDs ~> null) (numberGlyphIDs ~> null)
 			chain-rule ([nd 2] ~> null) (numberGlyphIDs ~> [nd 1])
 			chain-rule ([nd 1] ~> null) (numberGlyphIDs ~> [nd 6])
 			chain-rule ([nd 6] ~> null) (numberGlyphIDs ~> [nd 5])

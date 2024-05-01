@@ -130,3 +130,16 @@ glyph-block Letter-Cyrillic-Che : begin
 	select-variant 'cyrl/Shha/descBase' (shapeFrom -- 'cyrl/Shha') (follow -- 'H/descBase')
 
 	derive-composites 'cyrl/ShhaDescender' 0x526 'cyrl/Shha/descBase' [CyrDescender.rSideJut RightSB 0]
+
+	create-glyph 'sezimalDigitOne.lnum' 0xF1E01 : glyph-proc
+		include : MarkSet.capital
+		include : LeaningAnchor.Below.VBar.r RightSB
+		include : CyrCheShape [DivFrame 1] CAP 0.45 BODY.STRAIGHT SERIFS.NONE
+
+	glyph-block-import Letter-Shared : CreateAccentedComposition
+
+	CreateAccentedComposition 'niftimalDigitSeven.lnum' 0xF1E07 'sezimalDigitOne.lnum' 'dotAbove'
+	CreateAccentedComposition 'niftimalDigitDozenOne.lnum' 0xF1E0D 'sezimalDigitOne.lnum' 'dieresisAbove'
+	CreateAccentedComposition 'niftimalDigitThirsyOne.lnum' 0xF1E13 'sezimalDigitOne.lnum' 'ringAbove'
+	CreateAccentedComposition 'niftimalDigitFoursyOne.lnum' 0xF1E19 'sezimalDigitOne.lnum' 'macronAbove'
+	CreateAccentedComposition 'niftimalDigitFifsyOne.lnum' 0xF1E1F 'sezimalDigitOne.lnum' 'breveAbove'

@@ -263,3 +263,23 @@ glyph-block Digits-Zero : begin
 					dispiro
 						flat 0 (CAP * (1 - 0.77)) [widths.center BBS]
 						curl Width (CAP * 0.77)
+
+	create-glyph 'sezimalDigitZero.lnum' 0xF1E00 : glyph-proc
+		include : MarkSet.capital
+		include : Oval.Shape CAP
+		include : ZeroDotShape CAP
+
+	glyph-block-import Letter-Shared : CreateAccentedComposition
+
+	CreateAccentedComposition 'niftimalDigitSix.lnum' 0xF1E06 'sezimalDigitZero.lnum' 'dotAbove'
+	CreateAccentedComposition 'niftimalDigitDozen.lnum' 0xF1E0C 'sezimalDigitZero.lnum' 'dieresisAbove'
+	CreateAccentedComposition 'niftimalDigitThirsy.lnum' 0xF1E12 'sezimalDigitZero.lnum' 'ringAbove'
+	CreateAccentedComposition 'niftimalDigitFoursy.lnum' 0xF1E18 'sezimalDigitZero.lnum' 'macronAbove'
+	CreateAccentedComposition 'niftimalDigitFifsy.lnum' 0xF1E1E 'sezimalDigitZero.lnum' 'breveAbove'
+
+	# alias 'arabicSezimalDigitZero.lnum' 0xF1EC0 'zero.lnum'
+	# CreateAccentedComposition 'arabicNiftimalDigitSix.lnum' 0xF1EC6 'arabicSezimalDigitZero.lnum' 'dotAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitDozen.lnum' 0xF1ECC 'arabicSezimalDigitZero.lnum' 'dieresisAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitThirsy.lnum' 0xF1ED2 'arabicSezimalDigitZero.lnum' 'ringAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFoursy.lnum' 0xF1ED8 'arabicSezimalDigitZero.lnum' 'macronAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFifsy.lnum' 0xF1EDE 'arabicSezimalDigitZero.lnum' 'breveAbove'

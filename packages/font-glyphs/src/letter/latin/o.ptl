@@ -269,4 +269,14 @@ glyph-block Letter-Latin-O : begin
 		include : ExtendAboveBaseAnchors (XH + LongJut - 0.5 * Stroke)
 		include : ExtendBelowBaseAnchors (-LongJut + 0.5 * Stroke)
 		include : VBar.m Middle XH (XH + LongJut - 0.5 * Stroke)
-		include : VBar.m Middle (-LongJut + 0.5 * Stroke) 0
+
+	create-glyph 'sezimalDigitThree.lnum' 0xF1E03 : glyph-proc
+		include : MarkSet.capital
+		include : OShape CAP (Middle + 0.5) SB RightSB nothing nothing nothing
+		include : VBar.m (Middle + 0.5) 0 Middle
+
+	CreateAccentedComposition 'niftimalDigitNine.lnum' 0xF1E09 'sezimalDigitThree.lnum' 'dotAbove'
+	CreateAccentedComposition 'niftimalDigitDozenThree.lnum' 0xF1E0F 'sezimalDigitThree.lnum' 'dieresisAbove'
+	CreateAccentedComposition 'niftimalDigitThirsyThree.lnum' 0xF1E15 'sezimalDigitThree.lnum' 'ringAbove'
+	CreateAccentedComposition 'niftimalDigitFoursyThree.lnum' 0xF1E1B 'sezimalDigitThree.lnum' 'macronAbove'
+	CreateAccentedComposition 'niftimalDigitFifsyThree.lnum' 0xF1E21 'sezimalDigitThree.lnum' 'breveAbove'

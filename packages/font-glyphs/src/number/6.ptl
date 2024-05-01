@@ -108,3 +108,23 @@ glyph-block Digits-Six : begin
 	create-glyph 'mathbb/six' 0x1D7DE : glyph-proc
 		include : MarkSet.capital
 		include : StraightBarSixShape CAP (sw -- BBS) (bbd -- BBD)
+
+	create-glyph 'sezimalDigitFive.lnum' 0xF1E05 : glyph-proc
+		include : MarkSet.capital
+		include : ClosedContourSixShape CAP
+		#
+		# A linha abaixo vira de ponta cabeça
+		#
+		include : FlipAround (this.advanceWidth / 2) (CAP / 2)
+		#
+		# E essa abaixo espelha na horizontal
+		#
+		include : ScaleAround (currentGlyph.advanceWidth / 2) 0 (-1) 1
+
+	glyph-block-import Letter-Shared : CreateAccentedComposition
+
+	CreateAccentedComposition 'niftimalDigitEleven.lnum' 0xF1E0B 'sezimalDigitFive.lnum' 'dotAbove'
+	CreateAccentedComposition 'niftimalDigitDozenFive.lnum' 0xF1E11 'sezimalDigitFive.lnum' 'dieresisAbove'
+	CreateAccentedComposition 'niftimalDigitThirsyFive.lnum' 0xF1E17 'sezimalDigitFive.lnum' 'ringAbove'
+	CreateAccentedComposition 'niftimalDigitFoursyFive.lnum' 0xF1E1D 'sezimalDigitFive.lnum' 'macronAbove'
+	CreateAccentedComposition 'niftimalDigitFifsyFive.lnum' 0xF1E23 'sezimalDigitFive.lnum' 'breveAbove'

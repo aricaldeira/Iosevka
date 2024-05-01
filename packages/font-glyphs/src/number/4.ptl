@@ -90,3 +90,12 @@ glyph-block Digits-Four : begin
 	create-glyph 'mathbb/four' 0x1D7DC : glyph-proc
 		include : MarkSet.capital
 		include : FourStdShape CAP false true (sw -- BBS) (bbd -- BBD) (fine -- BBS)
+
+	# glyph-block-import Letter-Shared : CreateAccentedComposition
+    #
+	# alias 'arabicSezimalDigitFour.lnum' 0xF1EC4 'four.lnum'
+	# CreateAccentedComposition 'arabicNiftimalDigitTen.lnum' 0xF1ECA 'arabicSezimalDigitFour.lnum' 'dotAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitDozenFour.lnum' 0xF1ED0 'arabicSezimalDigitFour.lnum' 'dieresisAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitThirsyFour.lnum' 0xF1ED6 'arabicSezimalDigitFour.lnum' 'ringAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFoursyFour.lnum' 0xF1EDC 'arabicSezimalDigitFour.lnum' 'macronAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFifsyFour.lnum' 0xF1EE2 'arabicSezimalDigitFour.lnum' 'breveAbove'

@@ -95,3 +95,20 @@ glyph-block Digits-Two : begin
 			TwoArcShapeT spiro-outline 1 BBS CAP
 			VBar.r (RightSB - OX / 2 - BBD) 0 CAP BBS
 		include : HBar.b (SB + [HSwToV : 0.5 * BBS]) RightSB 0 BBS
+
+	turned 'sezimalDigitFour.lnum' 0xF1E04 'two.lnum' Middle (CAP / 2)
+
+	glyph-block-import Letter-Shared : CreateAccentedComposition
+
+	CreateAccentedComposition 'niftimalDigitTen.lnum' 0xF1E0A 'sezimalDigitFour.lnum' 'dotAbove'
+	CreateAccentedComposition 'niftimalDigitDozenFour.lnum' 0xF1E10 'sezimalDigitFour.lnum' 'dieresisAbove'
+	CreateAccentedComposition 'niftimalDigitThirsyFour.lnum' 0xF1E16 'sezimalDigitFour.lnum' 'ringAbove'
+	CreateAccentedComposition 'niftimalDigitFoursyFour.lnum' 0xF1E1C 'sezimalDigitFour.lnum' 'macronAbove'
+	CreateAccentedComposition 'niftimalDigitFifsyFour.lnum' 0xF1E22 'sezimalDigitFour.lnum' 'breveAbove'
+
+	# alias 'arabicSezimalDigitTwo.lnum' 0xF1EC2 'two.lnum'
+	# CreateAccentedComposition 'arabicNiftimalDigitEight.lnum' 0xF1EC8 'arabicSezimalDigitTwo.lnum' 'dotAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitDozenTwo.lnum' 0xF1ECE 'arabicSezimalDigitTwo.lnum' 'dieresisAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitThirsyTwo.lnum' 0xF1ED4 'arabicSezimalDigitTwo.lnum' 'ringAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFoursyTwo.lnum' 0xF1EDA 'arabicSezimalDigitTwo.lnum' 'macronAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFifsyTwo.lnum' 0xF1EE0 'arabicSezimalDigitTwo.lnum' 'breveAbove'

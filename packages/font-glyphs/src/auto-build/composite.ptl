@@ -610,7 +610,10 @@ glyph-block AutoBuild-Enclosure : begin
 
 	# Circled & Braced
 	define [digitGlyphNames j suffix] : begin
-		local digitNumberToNameMap { 'zero' 'one' 'two' 'three' 'four' 'five' 'six' 'seven' 'eight' 'nine' }
+		local digitNumberToNameMap { 'zero' 'one' 'two' 'three' 'four' 'five' 'six' 'seven' 'eight' 'nine' 'turnDigitTwo' 'turnDigitThree'
+		'sezimalDigitZero' 'sezimalDigitOne' 'sezimalDigitTwo'
+		'sezimalDigitThree' 'sezimalDigitFour' 'sezimalDigitFive'
+		}
 		local digits : [String j].split '' :.map [function x (x - 0)]
 		local names { }
 		foreach digit [items-of digits] : begin
@@ -991,6 +994,121 @@ glyph-block Autobuild-Fractions : begin
 		list 0x241A {"S" "U" "B"}
 		list 0x241B {"E" "S" "C"}
 		list 0x2421 {"D" "E" "L"}
+
+	createFractions : list
+		list 0xF1E6C { 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum' }
+		list 0xF1E6D { 'sezimalDigitOne.lnum' 'sezimalDigitThree.lnum' }
+		list 0xF1E6E { 'sezimalDigitTwo.lnum' 'sezimalDigitThree.lnum' }
+		list 0xF1E6F { 'sezimalDigitOne.lnum' 'sezimalDigitFour.lnum' }
+		list 0xF1E70 { 'sezimalDigitThree.lnum' 'sezimalDigitFour.lnum' }
+		list 0xF1E71 { 'sezimalDigitOne.lnum' 'sezimalDigitFive.lnum' }
+		list 0xF1E72 { 'sezimalDigitTwo.lnum' 'sezimalDigitFive.lnum' }
+		list 0xF1E73 { 'sezimalDigitThree.lnum' 'sezimalDigitFive.lnum' }
+		list 0xF1E74 { 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum' }
+		list 0xF1E75 { 'sezimalDigitOne.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
+		list 0xF1E76 { 'sezimalDigitFive.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
+		list 0xF1E77 { 'p' 'sezimalDigitZero.lnum' }
+		list 0xF1E78 { 'p' 'sezimalDigitOne.lnum' }
+		list 0xF1E79 { 'p' 'sezimalDigitTwo.lnum' }
+		list 0xF1E7A { 'p' 'sezimalDigitThree.lnum' }
+		list 0xF1E7B { 'p' 'sezimalDigitFour.lnum' }
+		list 0xF1E7C { 'p' 'sezimalDigitFive.lnum' }
+		list 0xF1E7D { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
+		list 0xF1E7E { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitOne.lnum' }
+		list 0xF1E7F { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum' }
+		list 0xF1E80 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitThree.lnum' }
+		list 0xF1E81 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitFour.lnum' }
+		list 0xF1E82 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitFive.lnum' }
+		list 0xF1E83 { 'p' 'sezimalDigitTwo.lnum' 'sezimalDigitZero.lnum' }
+		list 0xF1E84 { 'p' 'sezimalDigitThree.lnum' 'sezimalDigitZero.lnum' }
+		list 0xF1E85 { 'p' 'sezimalDigitFour.lnum' 'sezimalDigitZero.lnum' }
+		list 0xF1E86 { 'p' 'sezimalDigitFive.lnum' 'sezimalDigitZero.lnum' }
+		list 0xF1E87 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' 'sezimalDigitZero.lnum' }
+
+	define [PrefixLayout letterHeight scaleFactor] : begin
+		define gap : XH * 0.3
+
+		return : object
+			crowd        : begin 3.5
+			scaleFactor  : begin scaleFactor
+			breakRows    : function [a] { {a.0} [a.slice 1] }
+			baseShape    : function [nRows firstRowWidth] : glyph-proc
+				set-width Width
+				set-base-anchor 'fracBuildUp' SB (SymbolMid + (CAP * scaleFactor * nRows + gap * (nRows - 1)) / 2 - CAP * scaleFactor)
+			shiftShape   : function [iRow nRows numWidth denWidth] : glyph-proc
+				define [startPos w p] : SB + (RightSB - SB - w * scaleFactor) * p / (nRows - 1)
+				local offset : [startPos denWidth iRow] - [startPos numWidth (iRow - 1)] - numWidth * scaleFactor
+
+				set-width 0
+				set-mark-anchor 'fracBuildUp' 0 0 offset (-(CAP * scaleFactor + gap))
+
+	define [createPrefixes records]        : createFracImpl 'prefix'      records : FractionLayout XH 0 0.55 0.05
+
+	createFractions : list
+		list 0xF1E88 { 'p' 's' }
+		list 0xF1E89 { 'p' 'n' }
+		list 0xF1E8A { 'p' 'a' }
+		list 0xF1E8B { 'p' 's' 'a' }
+		list 0xF1E8C { 'p' 'n' 'a' }
+		list 0xF1E8D { 'p' 'x' }
+		list 0xF1E8E { 'p' 's' 'x' }
+		list 0xF1E8F { 'p' 'n' 'x' }
+		list 0xF1E90 { 'p' 'a' 'x' }
+		list 0xF1E91 { 'p' 's' 'a' 'x' }
+		list 0xF1E92 { 'p' 'n' 'a' 'x' }
+		list 0xF1E93 { 'p' 'D' 'x' }
+		list 0xF1E94 { 'p' 'T' 'x' }
+		list 0xF1E95 { 'p' 'C' 'x' }
+		list 0xF1E96 { 'p' 'P' 'x' }
+		list 0xF1E97 { 'p' 'X' 'x' }
+		# list 0xF1E98 { 'v' 'n' }
+		# list 0xF1E99 { 'v' 'p' 'x' }
+		# list 0xF1E9A { 'v' 'c' 'x' }
+		# list 0xF1E9B { 'v' 't' 'x' }
+		# list 0xF1E9C { 'v' 'd' 'x' }
+		# list 0xF1E9D { 'v' 'x' }
+		# list 0xF1E9E { 'v' 'p' }
+		# list 0xF1E9F { 'v' 'c' }
+		# list 0xF1EA0 { 'v' 't' }
+		# list 0xF1EA1 { 'v' 'd' }
+		# list 0xF1EA2 { 'v' 'e' }
+		# list 0xF1EA3 { 'turnv' 'E' }
+		# list 0xF1EA4 { 'turnv' 'D' }
+		# list 0xF1EA5 { 'turnv' 'T' }
+		# list 0xF1EA6 { 'turnv' 'C' }
+		# list 0xF1EA7 { 'turnv' 'P' }
+		# list 0xF1EA8 { 'turnv' 'X' }
+		# list 0xF1EA9 { 'turnv' 'D' 'X' }
+		# list 0xF1EAA { 'turnv' 'T' 'X' }
+		# list 0xF1EAB { 'turnv' 'C' 'X' }
+		# list 0xF1EAC { 'turnv' 'P' 'X' }
+		# list 0xF1EAD { 'turnv' 'N' }
+
+	# define [createFractionsNiftimal records]   : createFracImpl 'frac' records : FractionLayout CAP [AdviceStroke 3] 0.45 0.1
+    #
+	# createFractionsNiftimal : list
+	# 	list 0xF1E77 { 'sezimalDigitOne.lnum' 'niftimalDigitSix.lnum' }
+	# 	list 0xF1E78 { 'sezimalDigitFive.lnum' 'niftimalDigitSix.lnum' }
+	# 	list 0xF1E79 { 'sezimalDigitOne.lnum' 'niftimalDigitSeven.lnum' }
+	# 	list 0xF1E7A { 'sezimalDigitTwo.lnum' 'niftimalDigitSeven.lnum' }
+	# 	list 0xF1E7B { 'sezimalDigitThree.lnum' 'niftimalDigitSeven.lnum' }
+	# 	list 0xF1E7C { 'sezimalDigitFour.lnum' 'niftimalDigitSeven.lnum' }
+	# 	list 0xF1E7D { 'sezimalDigitFive.lnum' 'niftimalDigitSeven.lnum' }
+	# 	list 0xF1E7E { 'niftimalDigitSix.lnum' 'niftimalDigitSeven.lnum' }
+	# 	list 0xF1E7F { 'sezimalDigitOne.lnum' 'niftimalDigitEight.lnum' }
+	# 	list 0xF1E80 { 'sezimalDigitThree.lnum' 'niftimalDigitEight.lnum' }
+	# 	list 0xF1E81 { 'sezimalDigitFive.lnum' 'niftimalDigitEight.lnum' }
+	# 	list 0xF1E82 { 'niftimalDigitSeven.lnum' 'niftimalDigitEight.lnum' }
+	# 	list 0xF1E83 { 'sezimalDigitOne.lnum' 'niftimalDigitNine.lnum' }
+	# 	list 0xF1E84 { 'sezimalDigitTwo.lnum' 'niftimalDigitNine.lnum' }
+	# 	list 0xF1E85 { 'sezimalDigitFour.lnum' 'niftimalDigitNine.lnum' }
+	# 	list 0xF1E86 { 'sezimalDigitFive.lnum' 'niftimalDigitNine.lnum' }
+	# 	list 0xF1E87 { 'niftimalDigitSeven.lnum' 'niftimalDigitNine.lnum' }
+	# 	list 0xF1E88 { 'niftimalDigitEight.lnum' 'niftimalDigitNine.lnum' }
+	# 	list 0xF1E89 { 'sezimalDigitOne.lnum' 'niftimalDigitTen.lnum' }
+	# 	list 0xF1E8A { 'sezimalDigitThree.lnum' 'niftimalDigitTen.lnum' }
+	# 	list 0xF1E8B { 'niftimalDigitSeven.lnum' 'niftimalDigitTen.lnum' }
+	# 	list 0xF1E8C { 'niftimalDigitNine.lnum' 'niftimalDigitTen.lnum' }
 
 glyph-block AutoBuild-Accented-Equal : begin
 	glyph-block-import CommonShapes
@@ -1454,4 +1572,7 @@ glyph-block Autobuild-Grouped-Digits : begin
 	createGroupedDigits 0.9 3.0 {
 		'zero.lnum' 'one.lnum' 'two.lnum' 'three.lnum' 'four.lnum'
 		'five.lnum' 'six.lnum' 'seven.lnum' 'eight.lnum' 'nine.lnum'
+		'turnDigitTwo', 'turnDigitThree'
+		'sezimalDigitZero.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum'
+		'sezimalDigitThree.lnum' 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum'
 	}

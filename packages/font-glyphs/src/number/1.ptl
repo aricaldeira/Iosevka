@@ -84,3 +84,12 @@ glyph-block Digits-One : begin
 			widths.lhs BBS
 			corner (barCenter + BBD / 2) CAP
 			corner xSerifTerminal ySerifTerminal
+
+	# glyph-block-import Letter-Shared : CreateAccentedComposition
+    #
+	# alias 'arabicSezimalDigitOne.lnum' 0xF1EC1 'one.lnum'
+	# CreateAccentedComposition 'arabicNiftimalDigitSeven.lnum' 0xF1EC7 'arabicSezimalDigitOne.lnum' 'dotAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitDozenOne.lnum' 0xF1ECD 'arabicSezimalDigitOne.lnum' 'dieresisAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitThirsyOne.lnum' 0xF1ED3 'arabicSezimalDigitOne.lnum' 'ringAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFoursyOne.lnum' 0xF1ED9 'arabicSezimalDigitOne.lnum' 'macronAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFifsyOne.lnum' 0xF1EDF 'arabicSezimalDigitOne.lnum' 'breveAbove'

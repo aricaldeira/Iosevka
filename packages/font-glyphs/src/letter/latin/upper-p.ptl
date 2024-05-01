@@ -260,3 +260,23 @@ glyph-block Letter-Latin-Upper-P : begin
 			VBar.r (RightSB - overshoot - BBD) 0 CAP BBS
 
 	create-glyph 'mathbb/P' 0x2119 : composite-proc [MarkSet.capital] [BBPShape]
+
+	define [P2Shape] : with-params [
+				top [df [DivFrame 1]]
+				[mul PShape.defaultMul] [bp PShape.BarPos] [overshoot PShape.defaultOvershoot] [sw df.mvs]
+				[slab null] [withBar true] [setMark false]
+			] : glyph-proc
+		include : dispiro [widths.rhs sw] [PShapeOutlineKnots top df (mul / 4 * 3) bp overshoot sw 0]
+		include : VBar.l (df.leftSB - mul) 0 (Middle + mul) sw
+
+	create-glyph 'sezimalDigitTwo.lnum' 0xF1E02 : glyph-proc
+		include : MarkSet.capital
+		include : P2Shape CAP
+
+	glyph-block-import Letter-Shared : CreateAccentedComposition
+
+	CreateAccentedComposition 'niftimalDigitEight.lnum' 0xF1E08 'sezimalDigitTwo.lnum' 'dotAbove'
+	CreateAccentedComposition 'niftimalDigitDozenTwo.lnum' 0xF1E0E 'sezimalDigitTwo.lnum' 'dieresisAbove'
+	CreateAccentedComposition 'niftimalDigitThirsyTwo.lnum' 0xF1E14 'sezimalDigitTwo.lnum' 'ringAbove'
+	CreateAccentedComposition 'niftimalDigitFoursyTwo.lnum' 0xF1E1A 'sezimalDigitTwo.lnum' 'macronAbove'
+	CreateAccentedComposition 'niftimalDigitFifsyTwo.lnum' 0xF1E20 'sezimalDigitTwo.lnum' 'breveAbove'
