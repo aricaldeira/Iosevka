@@ -267,7 +267,7 @@ glyph-block Letter-Latin-Upper-P : begin
 				[slab null] [withBar true] [setMark false]
 			] : glyph-proc
 		include : dispiro [widths.rhs sw] [PShapeOutlineKnots top df (mul / 4 * 3) bp overshoot sw 0]
-		include : VBar.l (df.leftSB - mul) 0 (Middle + mul) sw
+		include : VBar.l (df.leftSB - mul) 0 (Middle + mul + 100) sw
 
 	create-glyph 'sezimalDigitTwo.lnum' 0xF1E02 : glyph-proc
 		include : MarkSet.capital
