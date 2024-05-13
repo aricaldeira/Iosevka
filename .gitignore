@@ -8,6 +8,7 @@ node_modules
 # Build artifacts
 .build
 dist/iosevka-sezimal/TTF-Unhinted
+dist/iosevka-sezimal/WOFF2-Unhinted
 release-archives
 
 # Generated files
