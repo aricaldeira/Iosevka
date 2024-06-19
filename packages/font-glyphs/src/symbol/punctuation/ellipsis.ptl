@@ -37,10 +37,10 @@ glyph-block Symbol-Punctuation-Ellipsis : begin
 
 			create-glyph "\[MangleName 'twodotsLEader'].\(suffix)" : glyph-proc
 				local width : MosaicWidth * [mix 1 para.diversityF (MosaicWidthScalar - 1)]
-				set-width width
+				set-width (width / 2)
 				local radius : [EllipsisDotRadius 2 MosaicWidth] * kDotRadius
-				local left : mix 0 width (1 / 4)
-				local right : mix 0 width (3 / 4)
+				local left : mix 0 width (1 / 4 / 2)
+				local right : mix 0 width (3 / 4 / 2)
 				include : DrawAt left radius (radius - overshoot)
 				include : DrawAt right radius (radius - overshoot)
 
