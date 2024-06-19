@@ -1074,6 +1074,10 @@ glyph-block Autobuild-Fractions : begin
 		list 0xF1E74 { 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum' }
 		list 0xF1E75 { 'sezimalDigitOne.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
 		list 0xF1E76 { 'sezimalDigitFive.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
+
+	define [createSezimalPerSymbols records]        : createFracImpl 'frac'      records : FractionLayout CAP [AdviceStroke 3] 0.55 0.15
+
+	createSezimalPerSymbols : list
 		list 0xF1E77 { 'p' 'sezimalDigitZero.lnum' }
 		list 0xF1E78 { 'p' 'sezimalDigitOne.lnum' }
 		list 0xF1E79 { 'p' 'sezimalDigitTwo.lnum' }
@@ -1111,45 +1115,45 @@ glyph-block Autobuild-Fractions : begin
 
 	define [createPrefixes records]        : createFracImpl 'prefix'      records : FractionLayout XH 0 0.55 0.05
 
-	createFractions : list
-		list 0xF1E88 { 'p' 's' }
-		list 0xF1E89 { 'p' 'n' }
-		list 0xF1E8A { 'p' 'a' }
-		list 0xF1E8B { 'p' 's' 'a' }
-		list 0xF1E8C { 'p' 'n' 'a' }
-		list 0xF1E8D { 'p' 'x' }
-		list 0xF1E8E { 'p' 's' 'x' }
-		list 0xF1E8F { 'p' 'n' 'x' }
-		list 0xF1E90 { 'p' 'a' 'x' }
-		list 0xF1E91 { 'p' 's' 'a' 'x' }
-		list 0xF1E92 { 'p' 'n' 'a' 'x' }
-		list 0xF1E93 { 'p' 'D' 'x' }
-		list 0xF1E94 { 'p' 'T' 'x' }
-		list 0xF1E95 { 'p' 'C' 'x' }
-		list 0xF1E96 { 'p' 'P' 'x' }
-		list 0xF1E97 { 'p' 'X' 'x' }
-		# list 0xF1E98 { 'v' 'n' }
-		# list 0xF1E99 { 'v' 'p' 'x' }
-		# list 0xF1E9A { 'v' 'c' 'x' }
-		# list 0xF1E9B { 'v' 't' 'x' }
-		# list 0xF1E9C { 'v' 'd' 'x' }
-		# list 0xF1E9D { 'v' 'x' }
-		# list 0xF1E9E { 'v' 'p' }
-		# list 0xF1E9F { 'v' 'c' }
-		# list 0xF1EA0 { 'v' 't' }
-		# list 0xF1EA1 { 'v' 'd' }
-		# list 0xF1EA2 { 'v' 'e' }
-		# list 0xF1EA3 { 'turnv' 'E' }
-		# list 0xF1EA4 { 'turnv' 'D' }
-		# list 0xF1EA5 { 'turnv' 'T' }
-		# list 0xF1EA6 { 'turnv' 'C' }
-		# list 0xF1EA7 { 'turnv' 'P' }
-		# list 0xF1EA8 { 'turnv' 'X' }
-		# list 0xF1EA9 { 'turnv' 'D' 'X' }
-		# list 0xF1EAA { 'turnv' 'T' 'X' }
-		# list 0xF1EAB { 'turnv' 'C' 'X' }
-		# list 0xF1EAC { 'turnv' 'P' 'X' }
-		# list 0xF1EAD { 'turnv' 'N' }
+	# 	createFractions : list
+	# 	list 0xF1E88 { 'p' 's' }
+	# 	list 0xF1E89 { 'p' 'n' }
+	# 	list 0xF1E8A { 'p' 'a' }
+	# 	list 0xF1E8B { 'p' 's' 'a' }
+	# 	list 0xF1E8C { 'p' 'n' 'a' }
+	# 	list 0xF1E8D { 'p' 'x' }
+	# 	list 0xF1E8E { 'p' 's' 'x' }
+	# 	list 0xF1E8F { 'p' 'n' 'x' }
+	# 	list 0xF1E90 { 'p' 'a' 'x' }
+	# 	list 0xF1E91 { 'p' 's' 'a' 'x' }
+	# 	list 0xF1E92 { 'p' 'n' 'a' 'x' }
+	# 	list 0xF1E93 { 'p' 'D' 'x' }
+	# 	list 0xF1E94 { 'p' 'T' 'x' }
+	# 	list 0xF1E95 { 'p' 'C' 'x' }
+	# 	list 0xF1E96 { 'p' 'P' 'x' }
+	# 	list 0xF1E97 { 'p' 'X' 'x' }
+	# 	# list 0xF1E98 { 'v' 'n' }
+	# 	# list 0xF1E99 { 'v' 'p' 'x' }
+	# 	# list 0xF1E9A { 'v' 'c' 'x' }
+	# 	# list 0xF1E9B { 'v' 't' 'x' }
+	# 	# list 0xF1E9C { 'v' 'd' 'x' }
+	# 	# list 0xF1E9D { 'v' 'x' }
+	# 	# list 0xF1E9E { 'v' 'p' }
+	# 	# list 0xF1E9F { 'v' 'c' }
+	# 	# list 0xF1EA0 { 'v' 't' }
+	# 	# list 0xF1EA1 { 'v' 'd' }
+	# 	# list 0xF1EA2 { 'v' 'e' }
+	# 	# list 0xF1EA3 { 'turnv' 'E' }
+	# 	# list 0xF1EA4 { 'turnv' 'D' }
+	# 	# list 0xF1EA5 { 'turnv' 'T' }
+	# 	# list 0xF1EA6 { 'turnv' 'C' }
+	# 	# list 0xF1EA7 { 'turnv' 'P' }
+	# 	# list 0xF1EA8 { 'turnv' 'X' }
+	# 	# list 0xF1EA9 { 'turnv' 'D' 'X' }
+	# 	# list 0xF1EAA { 'turnv' 'T' 'X' }
+	# 	# list 0xF1EAB { 'turnv' 'C' 'X' }
+	# 	# list 0xF1EAC { 'turnv' 'P' 'X' }
+	# 	# list 0xF1EAD { 'turnv' 'N' }
 
 	# define [createFractionsNiftimal records]   : createFracImpl 'frac' records : FractionLayout CAP [AdviceStroke 3] 0.45 0.1
     #
@@ -1641,7 +1645,7 @@ glyph-block Autobuild-Grouped-Digits : begin
 	createGroupedDigits 0.9 3.0 {
 		'zero.lnum' 'one.lnum' 'two.lnum' 'three.lnum' 'four.lnum'
 		'five.lnum' 'six.lnum' 'seven.lnum' 'eight.lnum' 'nine.lnum'
-		'turnDigitTwo', 'turnDigitThree'
+		'turnDigitTwo' 'turnDigitThree'
 		'sezimalDigitZero.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum'
 		'sezimalDigitThree.lnum' 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum'
 	}
