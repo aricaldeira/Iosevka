@@ -241,3 +241,52 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 
 	derive-composites 'hypodiastole' 0x2E12 'modifierLetterRightHalfRing'
 		ApparentTranslate 0 ([mix [mix [mix PeriodSize commaLow 0.5] yCurlyQuotes 0.5] quoteBottom (-1)] - quoteTop)
+
+	local sezimalTall (XH * 3 / 6)
+	local sezimalLow (Descender * 5 / 6)
+
+	local sezimalSmallTall (sezimalTall * 4 / 6)
+	local sezimalSmallLow (sezimalLow * 4 / 6)
+
+	local sezimalSmallTop (CAP - sezimalSmallLow)
+	local sezimalSmallTopLow (CAP - sezimalSmallTall)
+
+	local sezimalThinEnd (Stroke * 32 / 36)
+	local sezimalThickEnd (Stroke * 40 / 36)
+
+	local sezimalFullWidth para.diversityF
+	local sezimalHalfWidth [if (para.diversityII < 1) (2 / 6) 1]
+
+	define [SezimalSeparatorShape df t b] : dispiro
+		widths.center sezimalThinEnd
+		g4.down.start df.middle t [heading Downward]
+		g4 df.middle b [widths.center.heading sezimalThickEnd Downward]
+
+	define [SezimalSeparatorReversedShape df t b] : dispiro
+		widths.center sezimalThickEnd
+		g4.down.start df.middle t [heading Downward]
+		g4 df.middle b [widths.center.heading sezimalThinEnd Downward]
+
+	create-glyph 'sezimalSeparatorBase' : glyph-proc
+		local df : include : DivFrame sezimalFullWidth
+		include : SezimalSeparatorShape df sezimalTall sezimalLow
+
+	create-glyph 'sezimalGroupSeparator' 0xF1E6C : glyph-proc
+		local df : include : DivFrame sezimalHalfWidth
+		include : SezimalSeparatorShape df sezimalSmallTall sezimalSmallLow
+
+	create-glyph 'sezimalRadixSeparator' 0xF1E6D : glyph-proc
+		local df : include : DivFrame sezimalFullWidth
+		include : SezimalSeparatorShape df sezimalTall sezimalLow
+
+	create-glyph 'sezimalRecurringSeparator' 0xF1E6E : glyph-proc
+		local dfSingle : DivFrame sezimalFullWidth
+		local dist : 0.2 * Width
+		include : refer-glyph "sezimalSeparatorBase"
+		include : Translate (-dist * 2) 0
+		include : refer-glyph "sezimalSeparatorBase"
+		include : Translate (dist + Middle - dfSingle.middle) 0
+
+	create-glyph 'sezimalFractionGroupSeparator' 0xF1E6F : glyph-proc
+		local df : include : DivFrame sezimalHalfWidth
+		include : SezimalSeparatorReversedShape df sezimalSmallTop sezimalSmallTopLow
