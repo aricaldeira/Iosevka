@@ -245,10 +245,7 @@ glyph-block Digits-Zero : begin
 						flat 0 (CAP * (1 - 0.77)) [widths.center BBS]
 						curl Width (CAP * 0.77)
 
-	create-glyph 'sezimalDigitZero.lnum' 0xF1E00 : glyph-proc
-		include : MarkSet.capital
-		include : Oval.Shape CAP
-		include : ZeroDotShape CAP
+	alias 'sezimalDigitZero.lnum' 0xF1E00 'zero.lnum/forceSlashed'
 
 	glyph-block-import Letter-Shared : CreateAccentedComposition
 
