@@ -1062,39 +1062,39 @@ glyph-block Autobuild-Fractions : begin
 		list 0x241B {"E" "S" "C"}
 		list 0x2421 {"D" "E" "L"}
 
-	createFractions : list
-		list 0xF1E6C { 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum' }
-		list 0xF1E6D { 'sezimalDigitOne.lnum' 'sezimalDigitThree.lnum' }
-		list 0xF1E6E { 'sezimalDigitTwo.lnum' 'sezimalDigitThree.lnum' }
-		list 0xF1E6F { 'sezimalDigitOne.lnum' 'sezimalDigitFour.lnum' }
-		list 0xF1E70 { 'sezimalDigitThree.lnum' 'sezimalDigitFour.lnum' }
-		list 0xF1E71 { 'sezimalDigitOne.lnum' 'sezimalDigitFive.lnum' }
-		list 0xF1E72 { 'sezimalDigitTwo.lnum' 'sezimalDigitFive.lnum' }
-		list 0xF1E73 { 'sezimalDigitThree.lnum' 'sezimalDigitFive.lnum' }
-		list 0xF1E74 { 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum' }
-		list 0xF1E75 { 'sezimalDigitOne.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
-		list 0xF1E76 { 'sezimalDigitFive.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
+	# createFractions : list
+	# 	list 0xF1E70 { 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum' }
+	# 	list 0xF1E71 { 'sezimalDigitOne.lnum' 'sezimalDigitThree.lnum' }
+	# 	list 0xF1E72 { 'sezimalDigitTwo.lnum' 'sezimalDigitThree.lnum' }
+	# 	list 0xF1E73 { 'sezimalDigitOne.lnum' 'sezimalDigitFour.lnum' }
+	# 	list 0xF1E74 { 'sezimalDigitThree.lnum' 'sezimalDigitFour.lnum' }
+	# 	list 0xF1E75 { 'sezimalDigitOne.lnum' 'sezimalDigitFive.lnum' }
+	# 	list 0xF1E76 { 'sezimalDigitTwo.lnum' 'sezimalDigitFive.lnum' }
+	# 	list 0xF1E77 { 'sezimalDigitThree.lnum' 'sezimalDigitFive.lnum' }
+	# 	list 0xF1E78 { 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum' }
+	# 	list 0xF1E79 { 'sezimalDigitOne.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
+	# 	list 0xF1E7A { 'sezimalDigitFive.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
 
 	define [createSezimalPerSymbols records]        : createFracImpl 'frac'      records : FractionLayout CAP [AdviceStroke 3] 0.55 0.15
 
-	createSezimalPerSymbols : list
-		list 0xF1E77 { 'p' 'sezimalDigitZero.lnum' }
-		list 0xF1E78 { 'p' 'sezimalDigitOne.lnum' }
-		list 0xF1E79 { 'p' 'sezimalDigitTwo.lnum' }
-		list 0xF1E7A { 'p' 'sezimalDigitThree.lnum' }
-		list 0xF1E7B { 'p' 'sezimalDigitFour.lnum' }
-		list 0xF1E7C { 'p' 'sezimalDigitFive.lnum' }
-		list 0xF1E7D { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
-		list 0xF1E7E { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitOne.lnum' }
-		list 0xF1E7F { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum' }
-		list 0xF1E80 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitThree.lnum' }
-		list 0xF1E81 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitFour.lnum' }
-		list 0xF1E82 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitFive.lnum' }
-		list 0xF1E83 { 'p' 'sezimalDigitTwo.lnum' 'sezimalDigitZero.lnum' }
-		list 0xF1E84 { 'p' 'sezimalDigitThree.lnum' 'sezimalDigitZero.lnum' }
-		list 0xF1E85 { 'p' 'sezimalDigitFour.lnum' 'sezimalDigitZero.lnum' }
-		list 0xF1E86 { 'p' 'sezimalDigitFive.lnum' 'sezimalDigitZero.lnum' }
-		list 0xF1E87 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' 'sezimalDigitZero.lnum' }
+	# createSezimalPerSymbols : list
+	# 	list 0xF1E77 { 'p' 'sezimalDigitZero.lnum' }
+	# 	list 0xF1E78 { 'p' 'sezimalDigitOne.lnum' }
+	# 	list 0xF1E79 { 'p' 'sezimalDigitTwo.lnum' }
+	# 	list 0xF1E7A { 'p' 'sezimalDigitThree.lnum' }
+	# 	list 0xF1E7B { 'p' 'sezimalDigitFour.lnum' }
+	# 	list 0xF1E7C { 'p' 'sezimalDigitFive.lnum' }
+	# 	list 0xF1E7D { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
+	# 	list 0xF1E7E { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitOne.lnum' }
+	# 	list 0xF1E7F { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum' }
+	# 	list 0xF1E80 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitThree.lnum' }
+	# 	list 0xF1E81 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitFour.lnum' }
+	# 	list 0xF1E82 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitFive.lnum' }
+	# 	list 0xF1E83 { 'p' 'sezimalDigitTwo.lnum' 'sezimalDigitZero.lnum' }
+	# 	list 0xF1E84 { 'p' 'sezimalDigitThree.lnum' 'sezimalDigitZero.lnum' }
+	# 	list 0xF1E85 { 'p' 'sezimalDigitFour.lnum' 'sezimalDigitZero.lnum' }
+	# 	list 0xF1E86 { 'p' 'sezimalDigitFive.lnum' 'sezimalDigitZero.lnum' }
+	# 	list 0xF1E87 { 'p' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' 'sezimalDigitZero.lnum' }
 
 	define [PrefixLayout letterHeight scaleFactor] : begin
 		define gap : XH * 0.3
@@ -1116,22 +1116,22 @@ glyph-block Autobuild-Fractions : begin
 	define [createPrefixes records]        : createFracImpl 'prefix'      records : FractionLayout XH 0 0.55 0.05
 
 	createFractionsSmall : list
-		list 0xF1E88 { 'p' 's' }
-		list 0xF1E89 { 'p' 'n' }
-		list 0xF1E8A { 'p' 'a' }
-		list 0xF1E8B { 'p' 's' 'a' }
-		list 0xF1E8C { 'p' 'n' 'a' }
-		list 0xF1E8D { 'p' 'x' }
-		list 0xF1E8E { 'p' 's' 'x' }
-		list 0xF1E8F { 'p' 'n' 'x' }
-		list 0xF1E90 { 'p' 'a' 'x' }
-		list 0xF1E91 { 'p' 's' 'a' 'x' }
-		list 0xF1E92 { 'p' 'n' 'a' 'x' }
-		list 0xF1E93 { 'p' 'D' 'x' }
-		list 0xF1E94 { 'p' 'T' 'x' }
-		list 0xF1E95 { 'p' 'C' 'x' }
-		list 0xF1E96 { 'p' 'P' 'x' }
-		list 0xF1E97 { 'p' 'X' 'x' }
+		list 0xF1E70 { 'p' 's' }
+		list 0xF1E71 { 'p' 'n' }
+		list 0xF1E72 { 'p' 'a' }
+		list 0xF1E73 { 'p' 's' 'a' }
+		list 0xF1E74 { 'p' 'n' 'a' }
+		list 0xF1E75 { 'p' 'x' }
+		list 0xF1E76 { 'p' 's' 'x' }
+		list 0xF1E77 { 'p' 'n' 'x' }
+		list 0xF1E78 { 'p' 'a' 'x' }
+		list 0xF1E79 { 'p' 's' 'a' 'x' }
+		list 0xF1E7A { 'p' 'n' 'a' 'x' }
+		list 0xF1E7B { 'p' 'D' 'x' }
+		list 0xF1E7C { 'p' 'T' 'x' }
+		list 0xF1E7D { 'p' 'C' 'x' }
+		list 0xF1E7E { 'p' 'P' 'x' }
+		list 0xF1E7F { 'p' 'X' 'x' }
 
 	# define [createFractionsNiftimal records]   : createFracImpl 'frac' records : FractionLayout CAP [AdviceStroke 3] 0.45 0.1
     #
