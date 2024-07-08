@@ -252,7 +252,7 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 	local sezimalSmallTopLow (CAP - sezimalSmallTall)
 
 	local sezimalThinEnd (Stroke * 32 / 36)
-	local sezimalThickEnd (Stroke * 40 / 36)
+	local sezimalThickEnd (Stroke * 43 / 36)
 
 	local sezimalFullWidth para.diversityF
 	local sezimalHalfWidth [if (para.diversityII < 1) (2 / 6) 1]
@@ -271,15 +271,16 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 		local df : include : DivFrame sezimalFullWidth
 		include : SezimalSeparatorShape df sezimalTall sezimalLow
 
-	create-glyph 'sezimalGroupSeparator' 0xF1E6C : glyph-proc
+	create-glyph 'sezimalShadaraSeparator' 0xF1E6C : glyph-proc
 		local df : include : DivFrame sezimalHalfWidth
-		include : SezimalSeparatorShape df sezimalSmallTall sezimalSmallLow
+		include : SezimalSeparatorReversedShape df sezimalSmallTop sezimalSmallTopLow
+		# include : SezimalSeparatorShape df sezimalSmallTall sezimalSmallLow
 
-	create-glyph 'sezimalRadixSeparator' 0xF1E6D : glyph-proc
+	create-glyph 'sezimalMulamSeparator' 0xF1E6D : glyph-proc
 		local df : include : DivFrame sezimalFullWidth
 		include : SezimalSeparatorShape df sezimalTall sezimalLow
 
-	create-glyph 'sezimalRecurringSeparator' 0xF1E6E : glyph-proc
+	create-glyph 'sezimalPunaraavartiSeparator' 0xF1E6E : glyph-proc
 		local dfSingle : DivFrame sezimalFullWidth
 		local dist : 0.2 * Width
 		include : refer-glyph "sezimalSeparatorBase"
@@ -287,6 +288,6 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 		include : refer-glyph "sezimalSeparatorBase"
 		include : Translate (dist + Middle - dfSingle.middle) 0
 
-	create-glyph 'sezimalFractionGroupSeparator' 0xF1E6F : glyph-proc
+	create-glyph 'sezimalFractionShadaraSeparator' 0xF1E6F : glyph-proc
 		local df : include : DivFrame sezimalHalfWidth
 		include : SezimalSeparatorReversedShape df sezimalSmallTop sezimalSmallTopLow
