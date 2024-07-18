@@ -10,11 +10,11 @@ noLigation = true
 capital-b = "more-asymmetric-serifless"
 capital-d = "more-rounded-serifless"
 capital-n = "asymmetric-serifless"
-capital-w = "straight-vertical-sides-serifless"
+capital-w = "straight-serifless"
 i = "tailed-serifed"
 l = "tailed"
 r = "serifed"
-w = "straight-vertical-sides-serifless"
+w = "straight-serifless"
 y = "straight-turn-serifless"
 zero = "reverse-slashed"
 one = "no-base-long-top-serif"
@@ -47,7 +47,7 @@ capital-d = "more-rounded-serifless"
 capital-n = "asymmetric-serifless"
 capital-t = "motion-serifed"
 capital-u = "tailed-motion-serifed"
-capital-w = "straight-vertical-sides-serifless"
+capital-w = "curly-serifless"
 capital-x = "straight-motion-serifed"
 capital-y = "straight-motion-serifed"
 capital-z = "cursive-with-horizontal-crossbar"
@@ -71,7 +71,6 @@ zero = "reverse-slashed"
 one = "no-base-long-top-serif"
 two = "straight-neck-serifless"
 three = "two-arcs"
-#four = "open-serifless"
 four = "open-non-crossing-serifless"
 five = "upright-arched-serifless"
 six = "open-contour"
@@ -102,11 +101,11 @@ guillemet = "straight"
 # shape = 700
 # menu = 700
 # css = 700
-#
-# [buildPlans.IosevkaSezimal.widths.Normal]
-# shape = 600
-# menu = 5
-# css = "normal"
+
+[buildPlans.IosevkaSezimal.widths.Normal]
+shape = 600
+menu = 5
+css = "normal"
 
 [buildPlans.IosevkaSezimal.slopes.Upright]
 angle = 0
