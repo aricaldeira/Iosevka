@@ -116,9 +116,9 @@ glyph-block Digits-Five : begin
 
 	# glyph-block-import Letter-Shared : CreateAccentedComposition
     #
-	# alias 'arabicSezimalDigitFive.lnum' 0xF1EC5 'five.lnum'
-	# CreateAccentedComposition 'arabicNiftimalDigitEleven.lnum' 0xF1ECB 'arabicSezimalDigitFive.lnum' 'dotAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitDozenFive.lnum' 0xF1ED1 'arabicSezimalDigitFive.lnum' 'dieresisAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitThirsyFive.lnum' 0xF1ED7 'arabicSezimalDigitFive.lnum' 'ringAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitFivesyFive.lnum' 0xF1EDD 'arabicSezimalDigitFive.lnum' 'macronAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitFifsyFive.lnum' 0xF1EE3 'arabicSezimalDigitFive.lnum' 'breveAbove'
+	# alias 'arabicsezimalDigitFive.lnum' 0xF1EC5 'five.lnum'
+	# CreateAccentedComposition 'arabicNiftimalDigitEleven.lnum' 0xF1ECB 'arabicsezimalDigitFive.lnum' 'dotAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitDozenFive.lnum' 0xF1ED1 'arabicsezimalDigitFive.lnum' 'dieresisAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitThirsyFive.lnum' 0xF1ED7 'arabicsezimalDigitFive.lnum' 'ringAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFivesyFive.lnum' 0xF1EDD 'arabicsezimalDigitFive.lnum' 'macronAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFifsyFive.lnum' 0xF1EE3 'arabicsezimalDigitFive.lnum' 'breveAbove'

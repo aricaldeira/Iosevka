@@ -93,9 +93,9 @@ glyph-block Digits-Four : begin
 
 	# glyph-block-import Letter-Shared : CreateAccentedComposition
     #
-	# alias 'arabicSezimalDigitFour.lnum' 0xF1EC4 'four.lnum'
-	# CreateAccentedComposition 'arabicNiftimalDigitTen.lnum' 0xF1ECA 'arabicSezimalDigitFour.lnum' 'dotAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitDozenFour.lnum' 0xF1ED0 'arabicSezimalDigitFour.lnum' 'dieresisAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitThirsyFour.lnum' 0xF1ED6 'arabicSezimalDigitFour.lnum' 'ringAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitFoursyFour.lnum' 0xF1EDC 'arabicSezimalDigitFour.lnum' 'macronAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitFifsyFour.lnum' 0xF1EE2 'arabicSezimalDigitFour.lnum' 'breveAbove'
+	# alias 'arabicsezimalDigitFour.lnum' 0xF1EC4 'four.lnum'
+	# CreateAccentedComposition 'arabicNiftimalDigitTen.lnum' 0xF1ECA 'arabicsezimalDigitFour.lnum' 'dotAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitDozenFour.lnum' 0xF1ED0 'arabicsezimalDigitFour.lnum' 'dieresisAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitThirsyFour.lnum' 0xF1ED6 'arabicsezimalDigitFour.lnum' 'ringAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFoursyFour.lnum' 0xF1EDC 'arabicsezimalDigitFour.lnum' 'macronAbove'
+	# CreateAccentedComposition 'arabicNiftimalDigitFifsyFour.lnum' 0xF1EE2 'arabicsezimalDigitFour.lnum' 'breveAbove'

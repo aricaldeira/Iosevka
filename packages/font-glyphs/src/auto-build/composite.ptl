@@ -1081,9 +1081,9 @@ glyph-block Autobuild-Fractions : begin
 	# 	list 0xF1E79 { 'sezimalDigitOne.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
 	# 	list 0xF1E7A { 'sezimalDigitFive.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitZero.lnum' }
 
-	define [createSezimalPerSymbols records]        : createFracImpl 'frac'      records : FractionLayout CAP [AdviceStroke 3] 0.55 0.15
+	define [createsezimalPerSymbols records]        : createFracImpl 'frac'      records : FractionLayout CAP [AdviceStroke 3] 0.55 0.15
 
-	# createSezimalPerSymbols : list
+	# createsezimalPerSymbols : list
 	# 	list 0xF1E77 { 'p' 'sezimalDigitZero.lnum' }
 	# 	list 0xF1E78 { 'p' 'sezimalDigitOne.lnum' }
 	# 	list 0xF1E79 { 'p' 'sezimalDigitTwo.lnum' }
