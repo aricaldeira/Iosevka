@@ -1,9 +1,16 @@
 import { DiSpiroGeometry, SpiroGeometry } from "@iosevka/geometry";
 import {
 	BiKnotCollector,
-	UserControlKnot,
+	DEP_POST_X,
+	DEP_POST_Y,
+	DEP_PRE_X,
+	DEP_PRE_Y,
+	DerivedCoordinateBase,
 	Interpolator,
+	SpiroFlattener,
 	TerminateInstruction,
+	UserCloseKnotPair,
+	UserControlKnot,
 } from "@iosevka/geometry/spiro-control";
 import { bez3, fallback, mix } from "@iosevka/util";
 
@@ -18,9 +25,12 @@ class SpiroImplBase {
 	createCollector(glyph) {
 		const gizmo = glyph.gizmo || this.bindings.GlobalTransform;
 
+		const flattener = new SpiroFlattener();
+		for (const control of this.args) flattener.add(control);
+		flattener.flatten();
+
 		const collector = new BiKnotCollector(this.bindings.Contrast);
-		for (const control of this.args) collector.add(control);
-		collector.unwrap();
+		flattener.pipe(collector);
 
 		return { gizmo, collector };
 	}
@@ -73,15 +83,70 @@ class DiSpiroProxy {
 	}
 }
 
-export function SetupBuilders(bindings) {
-	const { Stroke, Superness, Contrast, CorrectionOMidX, TINY } = bindings;
-	function KnotType(type) {
-		return (x, y, f) => {
-			if (!isFinite(x)) throw new TypeError("NaN detected for X");
-			if (!isFinite(y)) throw new TypeError("NaN detected for Y");
-			return new UserControlKnot(type, x, y, f);
-		};
+/// The builder for directed knot pairs
+function KnotType(type) {
+	return (x, y, f) => {
+		if (!UserControlKnot.isCoordinateValid(x)) throw new TypeError("NaN detected for X");
+		if (!UserControlKnot.isCoordinateValid(y)) throw new TypeError("NaN detected for Y");
+		return new UserControlKnot(type, x, y, f);
+	};
+}
+
+/// The builder for directed knot pairs
+class DirectedKnotPairBuilder {
+	constructor(bindings, kPre, kCenter, kPost, deltaX, deltaY) {
+		const { TINY } = bindings;
+		this.start = DirPairImpl(kPre, kCenter, kPost, deltaX, deltaY, 0, TINY);
+		this.mid = DirPairImpl(kPre, kCenter, kPost, deltaX, deltaY, -0.5 * TINY, 0.5 * TINY);
+		this.end = DirPairImpl(kPre, kCenter, kPost, deltaX, deltaY, -TINY, 0);
 	}
+}
+
+function DirPairImpl(kPre, kCenter, kPost, dirX, dirY, dPre, dPost) {
+	let tyPre = kPre(0, 0).type;
+	let tyPost = kPost(0, 0).type;
+	return (x, y, af) =>
+		new UserCloseKnotPair(kCenter(x, y, af), tyPre, tyPost, dirX, dirY, dPre, dPost);
+}
+
+/// Derivative coordinates
+class CSameX extends DerivedCoordinateBase {
+	getDependency() {
+		return DEP_PRE_X;
+	}
+	resolve(pre) {
+		return pre.x;
+	}
+}
+class CSameY extends DerivedCoordinateBase {
+	getDependency() {
+		return DEP_PRE_Y;
+	}
+	resolve(pre) {
+		return pre.y;
+	}
+}
+class CSameXPost extends DerivedCoordinateBase {
+	getDependency() {
+		return DEP_POST_X;
+	}
+	resolve(pre, curr, post) {
+		return post.x;
+	}
+}
+class CSameYPost extends DerivedCoordinateBase {
+	getDependency() {
+		return DEP_POST_Y;
+	}
+	resolve(pre, curr, post) {
+		return post.y;
+	}
+}
+
+export function SetupBuilders(bindings) {
+	const { Stroke, Superness } = bindings;
+
+	// Simple knot types
 	const g4 = KnotType("g4");
 	const g2 = KnotType("g2");
 	const corner = KnotType("corner");
@@ -90,49 +155,49 @@ export function SetupBuilders(bindings) {
 	const close = f => new TerminateInstruction("close", f);
 	const end = f => new TerminateInstruction("end", f);
 
+	// Pair knots
 	const straight = { l: flat, r: curl };
 	const g2c = { l: g2, r: corner };
 	const cg2 = { l: corner, r: g2 };
 	const flatc = { l: flat, r: corner };
 	const ccurl = { l: corner, r: curl };
 
+	// Add the directed/heading knot builders
 	{
+		// prettier-ignore
+		let knotTypes = [
+			[ g4,       g4,     g4,     g4     ],
+			[ g2,       g2,     g2,     g2     ],
+			[ corner,   corner, corner, corner ],
+			[ straight, flat,   g2,     curl   ],
+			[ g2c,      g2,     corner, corner ],
+			[ cg2,      corner, corner, g2     ],
+			[ flatc,    flat,   corner, corner ],
+			[ ccurl,    corner, corner, curl   ],
+		];
 		let directions = [
+			// Straights
 			{ name: "up", x: 0, y: 1 },
 			{ name: "down", x: 0, y: -1 },
 			{ name: "left", x: -1, y: 0 },
 			{ name: "right", x: 1, y: 0 },
+			{ name: "u", x: 0, y: 1 },
+			{ name: "d", x: 0, y: -1 },
+			{ name: "l", x: -1, y: 0 },
+			{ name: "r", x: 1, y: 0 },
+
+			// Diagonals
 			{ name: "ru", x: 1, y: 1 },
 			{ name: "rd", x: 1, y: -1 },
 			{ name: "lu", x: -1, y: 1 },
 			{ name: "ld", x: -1, y: -1 },
 		];
-		let adhesions = [
-			{ name: "start", l: 0, r: TINY },
-			{ name: "mid", l: -0.5 * TINY, r: 0.5 * TINY },
-			{ name: "end", l: -TINY, r: 0 },
-		];
-		let knotTypes = [
-			[g4, g4, g4],
-			[g2, g2, g2],
-			[corner, corner, corner],
-			[straight, flat, curl],
-			[g2c, g2, corner],
-			[cg2, corner, g2],
-			[flatc, flat, corner],
-			[ccurl, corner, curl],
-		];
-		for (const [sink, kl, kr] of knotTypes) {
+		for (const [sink, kl, kc, kr] of knotTypes) {
+			sink.sl = s => new DirectedKnotPairBuilder(bindings, kl, kc, kr, -1, s);
+			sink.sr = s => new DirectedKnotPairBuilder(bindings, kl, kc, kr, 1, s);
+			sink.dir = (dx, dy) => new DirectedKnotPairBuilder(bindings, kl, kc, kr, dx, dy);
 			for (const d of directions) {
-				sink[d.name] = {};
-				for (const a of adhesions) {
-					sink[d.name][a.name] = (x, y, af) => [
-						kl(x + d.x * a.l, y + d.y * a.l, af),
-						kr(x + d.x * a.r, y + d.y * a.r, af),
-					];
-					sink[d.name][a.name].l = (x, y, af) => kl(x + d.x * a.l, y + d.y * a.l, af);
-					sink[d.name][a.name].r = (x, y, af) => kr(x + d.x * a.r, y + d.y * a.r, af);
-				}
+				sink[d.name] = new DirectedKnotPairBuilder(bindings, kl, kc, kr, d.x, d.y);
 			}
 		}
 	}
@@ -414,5 +479,10 @@ export function SetupBuilders(bindings) {
 		dispiro,
 		"spiro-outline": spiroOutline,
 		"spiro-collect": spiroCollect,
+
+		"same-x": new CSameX(),
+		"same-y": new CSameY(),
+		"same-x-post": new CSameXPost(),
+		"same-y-post": new CSameYPost(),
 	};
 }
