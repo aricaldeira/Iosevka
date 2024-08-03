@@ -99,7 +99,7 @@ glyph-block Digits-Six : begin
 		#
 		# A linha abaixo vira de ponta cabeça
 		#
-		include : FlipAround (this.advanceWidth / 2) (CAP / 2)
+		include : FlipAround (currentGlyph.advanceWidth / 2) (CAP / 2)
 		#
 		# E essa abaixo espelha na horizontal
 		#
