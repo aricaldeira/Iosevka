@@ -1346,7 +1346,8 @@ glyph-block Autobuild-Fractions : begin
 		list 0xF1E7C { 'p' 'T' 'x' }
 		list 0xF1E7D { 'p' 'C' 'x' }
 		list 0xF1E7E { 'p' 'P' 'x' }
-		list 0xF1E7F { 'p' 'X' 'x' }
+		list 0xF1E7F { 'p' 'N' }
+		list 0xF1E80 { 'S' 'm' }
 
 	# define [createFractionsNiftimal records]   : createFracImpl 'frac' records : FractionLayout CAP [AdviceStroke 3] 0.45 0.1
     #
