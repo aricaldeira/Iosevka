@@ -1337,17 +1337,17 @@ glyph-block Autobuild-Fractions : begin
 		list 0xF1E73 { 'p' 's' 'a' }
 		list 0xF1E74 { 'p' 'n' 'a' }
 		list 0xF1E75 { 'p' 'x' }
-		list 0xF1E76 { 'p' 's' 'x' }
-		list 0xF1E77 { 'p' 'n' 'x' }
-		list 0xF1E78 { 'p' 'a' 'x' }
-		list 0xF1E79 { 'p' 's' 'a' 'x' }
-		list 0xF1E7A { 'p' 'n' 'a' 'x' }
-		list 0xF1E7B { 'p' 'D' 'x' }
-		list 0xF1E7C { 'p' 'T' 'x' }
-		list 0xF1E7D { 'p' 'C' 'x' }
-		list 0xF1E7E { 'p' 'P' 'x' }
-		list 0xF1E7F { 'p' 'N' }
-		list 0xF1E80 { 'S' 'm' }
+		# list 0xF1E76 { 'p' 's' 'x' }
+		# list 0xF1E77 { 'p' 'n' 'x' }
+		# list 0xF1E78 { 'p' 'a' 'x' }
+		# list 0xF1E79 { 'p' 's' 'a' 'x' }
+		# list 0xF1E7A { 'p' 'n' 'a' 'x' }
+		# list 0xF1E7B { 'p' 'D' 'x' }
+		# list 0xF1E7C { 'p' 'T' 'x' }
+		# list 0xF1E7D { 'p' 'C' 'x' }
+		# list 0xF1E7E { 'p' 'P' 'x' }
+		# list 0xF1E7F { 'p' 'N' }
+		# list 0xF1E80 { 'S' 'D' }
 
 	# define [createFractionsNiftimal records]   : createFracImpl 'frac' records : FractionLayout CAP [AdviceStroke 3] 0.45 0.1
     #
