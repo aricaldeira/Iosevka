@@ -12,27 +12,9 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 100;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedThin.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedThin.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 100;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-ThinItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ThinItalic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 100;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedThinItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedThinItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -48,27 +30,9 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 200;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedExtraLight.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedExtraLight.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 200;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-ExtraLightItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtraLightItalic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 200;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedExtraLightItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedExtraLightItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -84,27 +48,9 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 300;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedLight.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedLight.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 300;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-LightItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-LightItalic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 300;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedLightItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedLightItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -120,27 +66,9 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 400;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-Extended.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-Extended.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 400;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-Italic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-Italic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 400;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -156,27 +84,9 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 500;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedMedium.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedMedium.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 500;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-MediumItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-MediumItalic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 500;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedMediumItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedMediumItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -192,27 +102,9 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 600;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedSemiBold.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedSemiBold.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 600;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-SemiBoldItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-SemiBoldItalic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 600;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedSemiBoldItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedSemiBoldItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -228,27 +120,9 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 700;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedBold.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedBold.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 700;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-BoldItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-BoldItalic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 700;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedBoldItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedBoldItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -264,27 +138,9 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 800;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedExtraBold.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedExtraBold.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 800;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-ExtraBoldItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtraBoldItalic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 800;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedExtraBoldItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedExtraBoldItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -300,25 +156,7 @@
 	font-family: 'Iosevka Sezimal QP Web';
 	font-display: swap;
 	font-weight: 900;
-	font-stretch: expanded;
-	font-style: normal;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedHeavy.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedHeavy.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 900;
 	font-stretch: normal;
 	font-style: italic;
 	src: url('WOFF2/IosevkaSezimalQP-HeavyItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-HeavyItalic.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Iosevka Sezimal QP Web';
-	font-display: swap;
-	font-weight: 900;
-	font-stretch: expanded;
-	font-style: italic;
-	src: url('WOFF2/IosevkaSezimalQP-ExtendedHeavyItalic.woff2') format('woff2'), url('TTF/IosevkaSezimalQP-ExtendedHeavyItalic.ttf') format('truetype');
 }
