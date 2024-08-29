@@ -280,11 +280,11 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 
 	alias 'sezimalArdaSeparator.lnum' 0xF1E6D 'thinSp'
 
-	create-glyph 'sezimalMulamSeparator.lnum' 0xF1E6E : glyph-proc
+	create-glyph 'sezimalWedgeSeparator.lnum' 0xF1E6E : glyph-proc
 		local df : include : DivFrame sezimalFullWidth
 		include : sezimalSeparatorShape df sezimalTall sezimalLow
 
-	create-glyph 'sezimalPunaraavartiSeparator.lnum' 0xF1E6F : glyph-proc
+	create-glyph 'sezimalRepeatSeparator.lnum' 0xF1E6F : glyph-proc
 		local dfSingle : DivFrame sezimalFullWidth
 		local dist : 0.2 * Width
 		include : refer-glyph "sezimalSeparatorBase"
