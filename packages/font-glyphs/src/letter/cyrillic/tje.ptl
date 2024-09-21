@@ -36,7 +36,7 @@ glyph-block Letter-Cyrillic-Tje : begin
 			left   -- [mix df.leftSB df.rightSB 0.3] + OX
 			right  -- df.rightSB
 			stroke -- df.mvs
-			bowl   -- [Math.min (YeriBarPos * top + HalfStroke) (top - 1.25 * jutTop)]
+			bowl   -- YeriBarPos * top + [Math.min HalfStroke jutMid]
 		eject-contour 'serifYeriLT'
 		eject-contour 'serifYeriLB'
 
@@ -85,7 +85,9 @@ glyph-block Letter-Cyrillic-Tje : begin
 		shapeFrom -- 'cyrl/tje.upright/leftHalf'
 
 	select-variant 'cyrl/Tje/rightHalf'
+		follow -- 'cyrl/Tje/rightHalf'
 	select-variant 'cyrl/tje.upright/rightHalf'
+		follow -- 'cyrl/tje/rightHalf'
 
 	CreateDependentComposite 'cyrl/Tje' 0x1C89 'cyrl/Tje/rightHalf' : object
 		full    'cyrl/Tje/leftHalf/full'
