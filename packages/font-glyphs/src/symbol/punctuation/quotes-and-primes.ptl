@@ -256,7 +256,7 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 	local sezimalThinEnd (Stroke * 28 / 36)
 	local sezimalThickEnd (Stroke * 54 / 36)
 
-	local sezimalFullWidth para.diversityF
+	local sezimalFullWidth para.diversityI
 	local sezimalHalfWidth [if (para.diversityII < 1) (2 / 6) 1]
 
 	define [sezimalSeparatorShape df t b] : dispiro
@@ -292,6 +292,8 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 		include : refer-glyph "sezimalSeparatorBase"
 		include : Translate (dist + Middle - dfSingle.middle) 0
 
-	#create-glyph 'sezimalFractionShadaraSeparator.lnum' 0xF1E6F : glyph-proc
-	#	local df : include : DivFrame sezimalHalfWidth
-	#	include : sezimalSeparatorReversedShape df sezimalSmallTop sezimalSmallTopLow
+	create-glyph 'sezimalCoinWedgeSeparator.lnum' 0xF1E76 : glyph-proc
+		local df : include : DivFrame sezimalFullWidth
+		include : sezimalSeparatorShape df sezimalTall sezimalLow
+		define sw : AdviceStroke 5
+		include : RingStrokeAt df.middle (XH - PeriodRadius) (PeriodRadius + sw / 2 - O) sw
