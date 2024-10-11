@@ -244,6 +244,7 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 
 	local sezimalTall (XH * 3 / 6)
 	local sezimalLow (Descender * 5 / 6)
+	local sezimalHeight (sezimalTall - sezimalLow)
 
 	local sezimalSmallProportion (4 / 6)
 
@@ -252,6 +253,7 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 
 	local sezimalSmallTop (CAP - sezimalSmallLow)
 	local sezimalSmallTopLow (CAP - sezimalSmallTall)
+	local sezimalSmallHeight (sezimalSmallTop - sezimalSmallTopLow)
 
 	local sezimalThinEnd (Stroke * 28 / 36)
 	local sezimalThickEnd (Stroke * 54 / 36)
@@ -296,4 +298,11 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 		local df : include : DivFrame sezimalFullWidth
 		include : sezimalSeparatorShape df sezimalTall sezimalLow
 		define sw : AdviceStroke 5
-		include : RingStrokeAt df.middle (XH - PeriodRadius) (PeriodRadius + sw / 2 - O) sw
+		include : RingStrokeAt df.middle (XH - PeriodRadius) (PeriodRadius + sw / 2) sw
+
+	create-glyph 'sezimalTimeSeparator.lnum' 0xF1E77 : glyph-proc
+		local df : include : DivFrame sezimalFullWidth
+		include : refer-glyph "period"
+		include : Translate 0 (XH - (PeriodRadius * 2))
+		include : sezimalSeparatorShape df sezimalTall (sezimalTall - sezimalSmallHeight)
+		include : Translate 0 0
