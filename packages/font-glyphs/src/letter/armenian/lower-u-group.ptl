@@ -12,11 +12,37 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 	glyph-block-import Letter-Shared-Shapes : SerifFrame
 	glyph-block-import Letter-Armenian-Shared-Shapes : ArmHBar TwoNeck
 	glyph-block-import Letter-Latin-U : USerifs
+	glyph-block-import Letter-Latin-Lower-M : SmallMArches
 
 	# Common Params
 	define barPos : XH / 2
 	define highBarPos XH
 	define jut Jut
+
+	do "Turned Ayb"
+		create-glyph 'armn/aybTurned' 0x560 : glyph-proc
+			local df : include : DivFrame para.diversityM 3
+			include : df.markSet.e
+			include : SmallMArches df XH 0 0 0
+			if SLAB : begin
+				local sf : SerifFrame.fromDf df XH 0
+				include : if para.isItalic
+					composite-proc sf.lt.outer sf.rb.outer
+					if sf.enoughSpaceForFullSerifs
+						composite-proc sf.lt.outer sf.lb.full sf.mb.full sf.rb.full
+						composite-proc sf.lt.outer sf.lb.outer sf.rb.outer
+
+	do "Ayb"
+		create-glyph 'armn/ayb' 0x561 : glyph-proc
+			local df : include : DivFrame para.diversityM 3
+			include : df.markSet.e
+			include : SmallMArches df XH 0 0 0
+			include : FlipAround df.middle (XH / 2)
+			if SLAB : begin
+				local sf : SerifFrame.fromDf df XH 0
+				include : if ([not para.isItalic] && sf.enoughSpaceForFullSerifs)
+					composite-proc sf.lt.outer sf.mt.left sf.rt.inner sf.rb.outer
+					composite-proc sf.lt.outer sf.rb.outer
 
 	do "Ben"
 		create-glyph 'armn/ben' 0x562 : glyph-proc
@@ -32,7 +58,7 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 			include : [ArmHBar.normal df 0].base
 			if SLAB : begin
 				local sf : SerifFrame.fromDf df XH Descender
-				include : composite-proc sf.lt.outer sf.lb.full
+				include : composite-proc sf.lt.outer sf.lb.fullSide
 				if [not para.isItalic] : begin
 					local sf2 : SerifFrame.fromDf df XH (XH / 2)
 					include sf2.rb.full
@@ -55,7 +81,7 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 				if para.isItalic
 					include sf.lt.outer
 					include : composite-proc sf.lt.outer sf.lb.full
-				include sf2.rb.full
+				include sf2.rb.fullSide
 
 	do "Ech"
 		create-glyph 'armn/ech' 0x565 : glyph-proc
@@ -105,7 +131,7 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 			if SLAB : begin
 				local sf : SerifFrame.fromDf df Ascender Descender
 				local sf2 : SerifFrame.fromDf df XH 0
-				include : composite-proc sf.lt.outer sf.lb.full
+				include : composite-proc sf.lt.outer sf.lb.fullSide
 				include : if para.isItalic sf2.rb.outer sf2.rb.full
 
 	do "Xeh"
@@ -130,7 +156,7 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 			if SLAB : begin
 				local sf : SerifFrame.fromDf df Ascender Descender
 				local sf2 : SerifFrame.fromDf df XH 0
-				include : composite-proc sf.lt.outer sf.lb.full
+				include : composite-proc sf.lt.outer sf.lb.fullSide
 				if ([not para.isItalic] && sf2.enoughSpaceForFullSerifs)
 					include : composite-proc sf2.rt.inner sf2.rb.outer
 					include sf2.rb.outer
@@ -152,8 +178,25 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 				local sf2 : SerifFrame.fromDf df XH Descender
 				include sf.lt.outer
 				if para.isItalic
-					include sf2.rb.full
-					include : composite-proc sf2.rt.inner sf2.rb.full
+					include sf2.rb.fullSide
+					include : composite-proc sf2.rt.inner sf2.rb.fullSide
+
+	do "Ho"
+		create-glyph 'armn/ho' 0x570 : glyph-proc
+			local df : include : DivFrame 1
+			include : df.markSet.b
+			include : VBar.l df.leftSB 0 Ascender df.mvs
+			include : nShoulder
+				left -- (df.leftSB + [HSwToV df.mvs])
+				right -- df.rightSB
+				top -- XH
+				bottom -- 0
+				stroke -- df.mvs
+			if SLAB : begin
+				local sf : SerifFrame.fromDf df Ascender 0
+				include : if para.isItalic
+					composite-proc sf.lt.outer sf.rb.outer
+					composite-proc sf.lt.outer sf.lb.full sf.rb.full
 
 	do "Ghat"
 		create-glyph 'armn/ghat' 0x572 : glyph-proc
@@ -208,6 +251,36 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 				include sf.rb.outer
 				if [not para.isItalic] : include sf.rt.inner
 
+	do "Vo"
+		create-glyph 'armn/vo' 0x578 : glyph-proc
+			local df : include : DivFrame 1
+			include : df.markSet.e
+			include : VBar.l df.leftSB 0 XH df.mvs
+			include : nShoulder
+				left -- (df.leftSB + [HSwToV df.mvs])
+				right -- df.rightSB
+				top -- XH
+				bottom -- 0
+				stroke -- df.mvs
+			if SLAB : begin
+				local sf : SerifFrame.fromDf df XH 0
+				include : if para.isItalic
+					composite-proc sf.lt.outer sf.rb.outer
+					composite-proc sf.lt.outer sf.lb.full sf.rb.full
+
+	do "Peh"
+		create-glyph 'armn/peh' 0x57A : glyph-proc
+			local df : include : DivFrame para.diversityM 3
+			include : df.markSet.p
+			include : SmallMArches df XH 0 0 0
+			include : FlipAround df.middle (XH / 2)
+			include : VBar.r df.rightSB Descender XH df.mvs
+			if SLAB : begin
+				local sf : SerifFrame.fromDf df XH Descender
+				include : if ([not para.isItalic] && sf.enoughSpaceForFullSerifs)
+					composite-proc sf.lt.outer sf.mt.left sf.rt.inner sf.rb.fullSide
+					composite-proc sf.lt.outer sf.rb.fullSide
+
 	do "Rra"
 		create-glyph 'armn/rra' 0x57C : glyph-proc
 			local df : include : DivFrame 1
@@ -243,6 +316,24 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 			# 	include sf.lt.outer
 			# 	if [not para.isItalic] : begin
 			# 		include : composite-proc sf.lb.full
+
+	do "Seh"
+		create-glyph 'armn/seh' 0x57D : glyph-proc
+			local df : include : DivFrame 1
+			include : df.markSet.e
+			include : nShoulder
+				top -- 0
+				bottom -- (-XH)
+				left -- (df.leftSB + [HSwToV df.mvs])
+				right -- df.rightSB
+				stroke -- df.mvs
+			include : FlipAround df.middle 0
+			include : VBar.r df.rightSB 0 XH df.mvs
+			if SLAB : begin
+				local sf : SerifFrame.fromDf df XH 0
+				include : if para.isItalic
+					composite-proc sf.lt.outer sf.rb.outer
+					composite-proc sf.lt.outer sf.rt.inner sf.rb.outer
 
 	do "Vew"
 		create-glyph 'armn/vew' 0x57E : glyph-proc
@@ -283,10 +374,9 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 			include : VBar.m df.middle 0 XH df.mvs
 			if SLAB : begin
 				local sf : SerifFrame.fromDf df XH 0
-				include sf.lt.outer
-				if ([not para.isItalic] && sf.enoughSpaceForFullSerifs)
-					include : composite-proc sf.mt.left sf.mb.right sf.rb.full
-					include sf.rb.outer
+				include : if ([not para.isItalic] && sf.enoughSpaceForFullSerifs)
+					composite-proc sf.lt.outer sf.mt.left sf.mb.right sf.rb.full
+					composite-proc sf.lt.outer sf.rb.outer
 
 	do "Reh"
 		create-glyph 'armn/reh' 0x580 : glyph-proc
@@ -302,7 +392,7 @@ glyph-block Letter-Armenian-Lower-U-Group : begin
 			if SLAB : begin
 				local sf : SerifFrame.fromDf df XH Descender
 				local sf2 : SerifFrame.fromDf df XH 0
-				include : composite-proc sf.lt.outer sf.lb.full
+				include : composite-proc sf.lt.outer sf.lb.fullSide
 				include : if para.isItalic sf2.rb.outer sf2.rb.full
 
 	do "P'iur"
