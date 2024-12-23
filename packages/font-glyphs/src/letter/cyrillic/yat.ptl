@@ -24,16 +24,16 @@ glyph-block Letter-Cyrillic-Yat : begin
 
 		include : Yeri top
 			left -- xYeriLeft
-			right  -- df.rightSB - O * 2
+			right -- (df.rightSB - O * 2)
 			pBar -- pBar
 			stroke -- sw
 
 		local cTop : if SLAB (top - Stroke / 2) top
 
-		local _xCrossbarLeft : mix 0 df.leftSB [if SLAB 0.25 0.375]
+		local _xCrossbarLeft : mix 0 df.leftSB : if SLAB 0.25 0.375
 		local xCrossbarLeft : fallback xCrossbarLeftOverride _xCrossbarLeft
 		local xCrossbarRight : mix _xCrossbarLeft (xYeriLeft + [HSwToV : 0.5 * sw]) 2
-		local yCrossbar : fallback yCrossbarOverride : [mix (top * pBar + sw / 2) cTop [if SLAB 0.625 0.5]] + 0.25 * OverlayStroke
+		local yCrossbar : fallback yCrossbarOverride : [mix (top * pBar + sw / 2) cTop : if SLAB 0.625 0.5] + 0.25 * OverlayStroke
 		include : HBar.t xCrossbarLeft xCrossbarRight yCrossbar OverlayStroke
 
 		if SLAB : begin
@@ -99,7 +99,7 @@ glyph-block Letter-Cyrillic-Yat : begin
 
 		# Italic Yat
 		create-glyph "cyrl/yat.italic/yeri.\(suffix)" : glyph-proc
-			local df : include : DivFrame para.diversityM 3
+			local df : include : DivFrame para.diversityMM 3
 			include : df.markSet.e
 
 			local xMidBarLeft : df.middle - [HSwToV : 0.5 * df.mvs]
@@ -113,7 +113,7 @@ glyph-block Letter-Cyrillic-Yat : begin
 			DependentSelector.set currentGlyph : if (suffix === "corner") 'full' 'reduced'
 
 		create-glyph "cyrl/tje.italic/yeri.\(suffix)" : glyph-proc
-			local df : include : DivFrame [mix 1 para.diversityM 2] 4
+			local df : include : DivFrame [mix 1 para.diversityMM 2] 4
 			include : df.markSet.e
 
 			local dfSub : df.slice 4 3 0
