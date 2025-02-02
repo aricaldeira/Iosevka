@@ -276,6 +276,7 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 	local sezimalHeight (sezimalTall - sezimalLow)
 
 	local sezimalSmallProportion (4 / 6)
+	local sezimalTinyProportion (3 / 6)
 
 	local sezimalSmallTall (sezimalTall * sezimalSmallProportion)
 	local sezimalSmallLow (sezimalLow * sezimalSmallProportion)
@@ -300,22 +301,36 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 		g4.down.start df.middle t [heading Downward]
 		g4 df.middle b [widths.center.heading (sezimalThinEnd * sezimalSmallProportion) Downward]
 
+	define [sezimalSeparatorReversedShapeTiny df t b] : dispiro
+		widths.center (sezimalThickEnd * sezimalTinyProportion)
+		g4.down.start df.middle t [heading Downward]
+		g4 df.middle b [widths.center.heading (sezimalThinEnd * sezimalTinyProportion) Downward]
+
 	create-glyph 'sezimalSeparatorBase' : glyph-proc
 		local df : include : DivFrame sezimalFullWidth
 		include : sezimalSeparatorShape df sezimalTall sezimalLow
 
+	create-glyph 'sezimalSmallSeparatorBase' : glyph-proc
+		local df : include : DivFrame sezimalFullWidth
+		include : sezimalSeparatorShape df sezimalTall (sezimalTall - sezimalSmallHeight)
+
 	create-glyph 'sezimalShadaraSeparator.lnum' 0xF1E6C : glyph-proc
 		local df : include : DivFrame sezimalHalfWidth
 		include : sezimalSeparatorReversedShape df sezimalSmallTop sezimalSmallTopLow
-		# include : sezimalSeparatorShape df sezimalSmallTall sezimalSmallLow
 
-	alias 'sezimalArdaSeparator.lnum' 0xF1E6D 'thinSp'
+	create-glyph 'sezimalArdaSeparator.lnum' 0xF1E6D : glyph-proc
+		local df : include : DivFrame sezimalHalfWidth
+		include : sezimalSeparatorReversedShapeTiny df sezimalSmallTop sezimalSmallTopLow
+
+	#alias 'sezimalArdaSeparator.lnum' 0xF1E6D 'thinSp'
 
 	create-glyph 'sezimalWedgeSeparator.lnum' 0xF1E6E : glyph-proc
+		include : MarkSet.wedge
 		local df : include : DivFrame sezimalFullWidth
 		include : sezimalSeparatorShape df sezimalTall sezimalLow
 
 	create-glyph 'sezimalRepeatSeparator.lnum' 0xF1E6F : glyph-proc
+		include : MarkSet.wedge
 		local dfSingle : DivFrame sezimalFullWidth
 		local dist : 0.2 * Width
 		include : refer-glyph "sezimalSeparatorBase"
@@ -323,15 +338,13 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 		include : refer-glyph "sezimalSeparatorBase"
 		include : Translate (dist + Middle - dfSingle.middle) 0
 
-	create-glyph 'sezimalCoinWedgeSeparator.lnum' 0xF1E76 : glyph-proc
-		local df : include : DivFrame sezimalFullWidth
-		include : sezimalSeparatorShape df sezimalTall sezimalLow
-		define sw : AdviceStroke 5
-		include : RingStrokeAt df.middle (XH - PeriodRadius) (PeriodRadius + sw / 2) sw
+	glyph-block-import Letter-Shared : CreateAccentedComposition
 
-	create-glyph 'sezimalTimeSeparator.lnum' 0xF1E77 : glyph-proc
+	CreateAccentedComposition 'sezimalCoinWedgeSeparator.lnum' 0xF1E76 'sezimalWedgeSeparator.lnum' 'ringAbove'
+
+	create-glyph 'sezimalTimeSeparatorBase' : glyph-proc
+		include : MarkSet.wedge
 		local df : include : DivFrame sezimalFullWidth
-		include : refer-glyph "period"
-		include : Translate 0 (XH - (PeriodRadius * 2))
 		include : sezimalSeparatorShape df sezimalTall (sezimalTall - sezimalSmallHeight)
-		include : Translate 0 0
+
+	CreateAccentedComposition 'sezimalTimeSeparator.lnum' 0xF1E77 'sezimalTimeSeparatorBase' 'dotAbove'
