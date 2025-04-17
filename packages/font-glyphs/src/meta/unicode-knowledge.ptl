@@ -38,7 +38,6 @@ export : define decompOverrides : object
 	# Latvians use comma instead of cedillas in several letters.
 	# Record them as custom decomposition.
 	0x122  { 'G' 'commaBelow' }
-	0x123  { 'g' 'turnCommaAbove' }
 	0x136  { 'K' 'commaBelow' }
 	0x137  { 'k' 'commaBelow' }
 	0x13B  { 'L' 'commaBelow' }
@@ -384,16 +383,6 @@ export : define ccmpCombinations : list
 	list {0x02B4 0x0322} 0x02B5     # ʴ
 	list {0x02E2 0x0322} 0x1DB3     # ˢ
 	list {0xA71D 0x0322} 0x107B9    # ꜝ
-
-	# Short stroke overlays
-	list {0x0044 0x0335} 0xA7C7     # D
-	list {0x0053 0x0335} 0xA7C9     # S
-	list {0x0064 0x0335} 0xA7C8     # d
-	list {0x0073 0x0335} 0xA7CA     # s
-
-	# Long stroke overlays
-	list {0x004F 0x0336} 0xA74A     # O
-	list {0x006F 0x0336} 0xA74B     # o
 
 	# Smooth breathings
 	list {0x0041 0x0486} 0xA7BA     # A
