@@ -12,6 +12,10 @@ dist/IosevkaSezimal/WOFF2-Unhinted
 dist/IosevkaSezimal/IosevkaSezimal-Unhinted.css
 release-archives
 
+# Test artifacts
+.test
+.coverage
+
 # Generated files
 packages/*/lib
 packages/font-glyphs/src/**/*.mjs
