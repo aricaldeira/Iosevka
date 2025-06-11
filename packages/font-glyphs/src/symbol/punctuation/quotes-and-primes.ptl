@@ -288,8 +288,8 @@ glyph-block Symbol-Punctuation-Quotes-And-Primes : begin
 	local sezimalThinEnd (Stroke * 28 / 36)
 	local sezimalThickEnd (Stroke * 54 / 36)
 
-	local sezimalFullWidth para.diversityI
-	local sezimalHalfWidth [if (para.diversityII < 1) (2 / 6) 1]
+	local sezimalFullWidth para.advanceScaleII
+	local sezimalHalfWidth para.advanceScaleII
 
 	define [sezimalSeparatorShape df t b] : dispiro
 		widths.center sezimalThinEnd
