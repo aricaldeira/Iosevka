@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     width="2048"
+     height="2048"
+     viewBox="0 0 2048 2048"
+     version="1.1"
+     id="svg1"
+     sodipodi:docname="F1EA8.svg"
+     inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs1" />
+    <sodipodi:namedview
+         id="namedview1"
+         pagecolor="#ffffff"
+         bordercolor="#000000"
+         borderopacity="0.25"
+         inkscape:showpageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.30725462"
+         inkscape:cx="1023.581"
+         inkscape:cy="696.49075"
+         inkscape:window-width="1920"
+         inkscape:window-height="1010"
+         inkscape:window-x="0"
+         inkscape:window-y="0"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg1" />
+    <path
+         d="m 1445.4836,1545.3532 q 16.927,-6.7708 33.8541,-13.5416 h -421.4836 v 88.0206 q 208.2027,-5.0781 387.6295,-74.479 z m 330.0774,-203.1246 60.9374,40.6249 q -165.8851,148.9581 -370.7024,226.8225 -204.8173,77.8644 -441.796,77.8644 -236.9787,0 -441.79601,-77.8644 -204.81731,-77.8644 -370.70241,-226.8225 l 60.93738,-40.6249 q 52.47386,50.7812 115.10395,93.0988 L 1024,360.45969 1660.4571,1435.3274 q 62.6301,-42.3176 115.1039,-93.0988 z M 602.51645,1545.3532 q 179.42673,69.4009 387.62945,74.479 v -88.0206 H 568.66235 q 16.92705,6.7708 33.8541,13.5416 z M 990.1459,1464.1034 V 560.19888 L 451.8657,1464.1034 Z m 605.9884,0 -538.2802,-903.90452 v 903.90452 z"
+         id="text1"
+         style="font-size:1733.33px;line-height:1.5;font-family:'K\'sConstellationSymbolsFV';-inkscape-font-specification:'K\'sConstellationSymbolsFV, Normal';text-align:center;text-decoration-color:#d40000;text-anchor:middle;stroke:#000000;stroke-width:75"
+         aria-label="m" />
+</svg>

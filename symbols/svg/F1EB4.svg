@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     width="2048"
+     height="2048"
+     viewBox="0 0 2048 2048"
+     version="1.1"
+     id="svg1"
+     sodipodi:docname="F1EB4.svg"
+     inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs1" />
+    <sodipodi:namedview
+         id="namedview1"
+         pagecolor="#ffffff"
+         bordercolor="#000000"
+         borderopacity="0.25"
+         inkscape:showpageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.30725462"
+         inkscape:cx="1030.0903"
+         inkscape:cy="1171.6667"
+         inkscape:window-width="1920"
+         inkscape:window-height="1010"
+         inkscape:window-x="0"
+         inkscape:window-y="0"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg1" />
+    <path
+         d="M 988.5834,1866.9151 V 712.33391 q 0,-28.33328 1.77083,-53.12491 Q 988.5834,467.95936 884.10443,367.02205 765.45881,251.9181 606.08411,251.9181 q -159.3747,0 -270.93699,111.56229 -111.5623,111.56229 -111.5623,270.93699 -1.77083,131.04143 84.99985,247.91621 l -49.58325,35.4166 q -99.16648,-99.16648 -106.2498,-276.24949 0,-198.33296 131.04143,-329.37438 131.04142,-131.04142 318.7494,-131.04142 187.70799,0 322.29107,132.81225 65.52071,65.52071 99.16648,161.14553 33.6458,-95.62482 99.1665,-161.14553 134.5831,-132.81225 322.291,-132.81225 187.708,0 318.7495,131.04142 131.0414,131.04142 131.0414,329.37438 -7.0833,177.08301 -106.2498,276.24949 l -49.5833,-35.4166 q 86.7707,-116.87478 84.9999,-247.91621 0,-159.3747 -111.5623,-270.93699 -111.5623,-111.56229 -270.937,-111.56229 -159.3747,0 -278.0203,115.10395 -104.479,100.93731 -106.2498,292.18695 1.7708,24.79163 1.7708,53.12491 V 1866.9151 Z"
+         id="text1"
+         style="font-size:1813.33px;line-height:1.5;font-family:'K\'sConstellationSymbolsFV';-inkscape-font-specification:'K\'sConstellationSymbolsFV, Normal';text-align:center;text-decoration-color:#d40000;text-anchor:middle;stroke:#000000;stroke-width:75"
+         aria-label="'" />
+</svg>

@@ -6,19 +6,19 @@ mv ../.build .
 rm private-build-plans.toml
 rm dist/IosevkaSezimal -rf
 ln -s private-build-plans.toml-sezimal private-build-plans.toml
-npm run build -- contents::IosevkaSezimal
+npm run build -- ttf::IosevkaSezimal
 rm private-build-plans.toml
 
 rm private-build-plans.toml
 rm dist/IosevkaSezimalQP -rf
 ln -s private-build-plans.toml-sezimal-qp private-build-plans.toml
-npm run build -- contents::IosevkaSezimalQP
+npm run build -- ttf::IosevkaSezimalQP
 rm private-build-plans.toml
 
 rm private-build-plans.toml
 rm dist/IosevkaSezimalTerminal -rf
 ln -s private-build-plans.toml-sezimal-term private-build-plans.toml
-npm run build -- contents::IosevkaSezimalTerminal
+npm run build -- ttf::IosevkaSezimalTerminal
 rm private-build-plans.toml
 
 rm dist/IosevkaSezimal/TTF-Unhinted -rf

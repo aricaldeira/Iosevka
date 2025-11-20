@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     width="2048"
+     height="2048"
+     viewBox="0 0 2048 2048"
+     version="1.1"
+     id="svg1"
+     sodipodi:docname="F1EA5.svg"
+     inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs1" />
+    <sodipodi:namedview
+         id="namedview1"
+         pagecolor="#ffffff"
+         bordercolor="#000000"
+         borderopacity="0.25"
+         inkscape:showpageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.30725462"
+         inkscape:cx="1031.7176"
+         inkscape:cy="1077.2824"
+         inkscape:window-width="1920"
+         inkscape:window-height="1010"
+         inkscape:window-x="0"
+         inkscape:window-y="0"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg1" />
+    <path
+         d="m 506.91763,1278.1141 q 0,219.5829 148.74972,368.3326 150.52056,148.7497 368.33265,148.7497 214.2704,0 364.791,-148.7497 152.2914,-148.7497 152.2914,-368.3326 0,-212.4996 -152.2914,-364.79103 Q 1238.2704,761.03169 1024,761.03169 q -217.81209,0 -366.56182,152.29138 -150.52055,152.29143 -150.52055,364.79103 z m -77.91652,0 q 0,-246.1454 171.77051,-421.45759 88.5415,-88.5415 198.33297,-132.81225 Q 680.45897,679.57351 591.91747,580.40703 430.77194,401.55319 429.00111,174.88695 h 77.91652 q 0,185.93715 139.89557,347.08269 141.66641,161.14553 377.1868,161.14553 235.5204,0 377.1868,-161.14553 139.8956,-161.14554 139.8956,-347.08269 h 77.9165 q -1.7708,226.66624 -162.9164,405.52008 -88.5415,99.16648 -208.9579,143.43723 109.7914,44.27075 198.3329,132.81225 173.5414,175.31219 173.5414,421.45759 0,253.2287 -173.5414,423.2283 Q 1271.9162,1873.113 1024,1873.113 q -251.45786,0 -423.22838,-171.7706 -171.77051,-169.9996 -171.77051,-423.2283 z"
+         id="text2"
+         style="font-size:1813.33px;line-height:1.5;font-family:'K\'sConstellationSymbolsFV';-inkscape-font-specification:'K\'sConstellationSymbolsFV, Normal';text-align:center;text-decoration-color:#d40000;text-anchor:middle;stroke:#000000;stroke-width:75"
+         aria-label="n" />
+</svg>

@@ -85,11 +85,11 @@ glyph-block Digits-One : begin
 			corner (barCenter + BBD / 2) CAP
 			corner xSerifTerminal ySerifTerminal
 
-	# glyph-block-import Letter-Shared : CreateAccentedComposition
-    #
-	# alias 'arabicsezimalDigitOne.lnum' 0xF1EC1 'one.lnum'
-	# CreateAccentedComposition 'arabicNiftimalDigitSeven.lnum' 0xF1EC7 'arabicsezimalDigitOne.lnum' 'dotAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitDozenOne.lnum' 0xF1ECD 'arabicsezimalDigitOne.lnum' 'dieresisAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitThirsyOne.lnum' 0xF1ED3 'arabicsezimalDigitOne.lnum' 'ringAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitFoursyOne.lnum' 0xF1ED9 'arabicsezimalDigitOne.lnum' 'macronAbove'
-	# CreateAccentedComposition 'arabicNiftimalDigitFifsyOne.lnum' 0xF1EDF 'arabicsezimalDigitOne.lnum' 'breveAbove'
+	glyph-block-import Letter-Shared : CreateAccentedComposition
+
+	alias 'arabicSezimalDigitOne.lnum' 0xF1ED1 'one.lnum'
+	CreateAccentedComposition 'arabicNiftimalDigitSeven.lnum' 0xF1ED7 'arabicSezimalDigitOne.lnum' 'dotAbove'
+	CreateAccentedComposition 'arabicNiftimalDigitDozenOne.lnum' 0xF1EDD 'arabicSezimalDigitOne.lnum' 'dieresisAbove'
+	CreateAccentedComposition 'arabicNiftimalDigitThirsyOne.lnum' 0xF1EE3 'arabicSezimalDigitOne.lnum' 'ringAbove'
+	CreateAccentedComposition 'arabicNiftimalDigitFoursyOne.lnum' 0xF1EE9 'arabicSezimalDigitOne.lnum' 'macronAbove'
+	CreateAccentedComposition 'arabicNiftimalDigitFifsyOne.lnum' 0xF1EEF 'arabicSezimalDigitOne.lnum' 'breveAbove'

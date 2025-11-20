@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     width="2048"
+     height="2048"
+     viewBox="0 0 2048 2048"
+     version="1.1"
+     id="svg1"
+     sodipodi:docname="F1E80.svg"
+     inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs1" />
+    <sodipodi:namedview
+         id="namedview1"
+         pagecolor="#ffffff"
+         bordercolor="#000000"
+         borderopacity="0.25"
+         inkscape:showpageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.17431641"
+         inkscape:cx="1061.2885"
+         inkscape:cy="1715.2717"
+         inkscape:window-width="1920"
+         inkscape:window-height="1010"
+         inkscape:window-x="0"
+         inkscape:window-y="0"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg1" />
+    <path
+         d="M 202.33488,1059.4166 V 988.58339 H 882.33362 Q 866.39615,600.77161 506.91765,329.83461 l 56.66656,-42.49992 q 375.41597,262.08285 389.58261,701.2487 h 141.66638 q 14.1666,-439.16585 389.5826,-701.2487 l 56.6666,42.49992 q -359.4785,270.937 -375.416,658.74878 h 679.9987 v 70.83321 h -679.9987 q 15.9375,387.8118 375.416,658.7488 l -56.6666,42.4999 q -375.416,-262.0828 -389.5826,-701.2487 H 953.16682 q -14.16664,439.1659 -389.58261,701.2487 l -56.66656,-42.4999 q 359.4785,-270.937 375.41597,-658.7488 z"
+         id="text2"
+         style="font-size:1813.33px;line-height:1.5;font-family:&quot;K'sConstellationSymbolsFV&quot;;-inkscape-font-specification:&quot;K'sConstellationSymbolsFV, Normal&quot;;text-align:center;text-decoration-color:#d40000;text-anchor:middle;stroke-width:75;stroke:#000000;stroke-opacity:1;stroke-dasharray:none"
+         aria-label="b" />
+</svg>

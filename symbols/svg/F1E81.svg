@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     width="2048"
+     height="2048"
+     viewBox="0 0 2048 2048"
+     version="1.1"
+     id="svg1"
+     sodipodi:docname="F1E81.svg"
+     inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs1" />
+    <sodipodi:namedview
+         id="namedview1"
+         pagecolor="#ffffff"
+         bordercolor="#000000"
+         borderopacity="0.25"
+         inkscape:showpageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.30725462"
+         inkscape:cx="1025.2083"
+         inkscape:cy="820.16667"
+         inkscape:window-width="1920"
+         inkscape:window-height="1010"
+         inkscape:window-x="0"
+         inkscape:window-y="0"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg1" />
+    <path
+         d="m 1797.8527,712.33388 q 95.6248,120.41649 95.6248,308.12442 0,187.708 -122.1872,313.437 -143.4373,136.3539 -334.6869,136.3539 H 600.77164 q -185.93716,0 -315.20775,-131.0415 Q 154.52247,1209.9372 154.52247,1024 q 0,-185.93723 129.27059,-315.20778 131.04142,-131.04142 316.97858,-131.04142 185.93715,0 306.35358,120.41644 122.18728,120.41645 139.89558,290.41613 38.9582,187.70803 106.2498,262.08283 120.4164,148.7498 276.2495,148.7498 166.458,0 279.7911,-113.3332 111.5623,-120.4164 111.5623,-272.7078 1.7708,-152.29143 -79.6874,-265.62452 z M 1103.6873,1307.3328 Q 1015.1458,1201.083 976.18759,988.58337 958.47929,846.91697 857.54199,747.75048 758.3755,648.584 600.77164,648.584 443.16776,648.584 333.3763,758.37546 225.35567,866.39607 225.35567,1024 q 0,157.6039 108.02063,267.3953 109.79146,108.0207 267.39534,108.0207 h 602.08216 q -53.1249,-37.1875 -99.1665,-92.0832 z"
+         id="text1"
+         style="font-size:1813.33px;line-height:1.5;font-family:&quot;K'sConstellationSymbolsFV&quot;;-inkscape-font-specification:&quot;K'sConstellationSymbolsFV, Normal&quot;;text-align:center;text-decoration-color:#d40000;text-anchor:middle;stroke-width:75;stroke:#000000;stroke-opacity:1;stroke-dasharray:none"
+         aria-label="5" />
+</svg>
