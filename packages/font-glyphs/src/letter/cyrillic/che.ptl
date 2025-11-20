@@ -10,8 +10,7 @@ glyph-block Letter-Cyrillic-Che : begin
 	glyph-block-import Common-Derivatives
 	glyph-block-import Mark-Adjustment : LeaningAnchor
 	glyph-block-import Letter-Shared : CreateSelectorVariants DefineSelectorGlyph
-	glyph-block-import Letter-Shared-Shapes : cheBowl SerifFrame RightwardTailedBar
-	glyph-block-import Letter-Shared-Shapes : TopHook CyrDescender
+	glyph-block-import Letter-Shared-Shapes : cheBowl SerifFrame RightwardTailedBar CyrDescender
 
 	glyph-block-export BODY
 	define BODY : object
