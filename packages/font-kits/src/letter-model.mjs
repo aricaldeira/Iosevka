@@ -228,5 +228,6 @@ class MarksetDiv {
 		this.plus = builder({ top: bindings.PlusTop, bot: bindings.PlusBot });
 		this.bp = builder({ top: bindings.Ascender, bot: bindings.Descender });
 		this.capDesc = builder({ top: bindings.CAP, bot: bindings.Descender });
+		this.wedge = builder({ top: (bindings.XH * 3 / 6),  bot: (bindings.Descender * 5 / 6)});
 	}
 }
