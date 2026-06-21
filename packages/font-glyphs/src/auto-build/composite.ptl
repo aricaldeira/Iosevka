@@ -919,7 +919,7 @@ glyph-block AutoBuild-Enclosure : begin
 
 	# Circled & Braced
 	define [digitGlyphNames j suffix] : begin
-		local digitNumberToNameMap { 'zero' 'one' 'two' 'three' 'four' 'five' 'six' 'seven' 'eight' 'nine' 'turnDigitTwo' 'turnDigitThree'
+		local digitNumberToNameMap { 'zero' 'one' 'two' 'three' 'four' 'five' 'six' 'seven' 'eight' 'nine' 'turnTwo' 'turnThree'
 		'sezimalDigitZero' 'sezimalDigitOne' 'sezimalDigitTwo'
 		'sezimalDigitThree' 'sezimalDigitFour' 'sezimalDigitFive'
 		}
@@ -1994,7 +1994,7 @@ glyph-block Autobuild-Grouped-Digits : begin
 	createGroupedDigits 0.9 3.0 {
 		'zero.lnum' 'one.lnum' 'two.lnum' 'three.lnum' 'four.lnum'
 		'five.lnum' 'six.lnum' 'seven.lnum' 'eight.lnum' 'nine.lnum'
-		'turnDigitTwo' 'turnDigitThree'
+		'turnTwo' 'turnThree'
 		'sezimalDigitZero.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum'
 		'sezimalDigitThree.lnum' 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum'
 	}

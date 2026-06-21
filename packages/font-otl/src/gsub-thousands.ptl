@@ -8,7 +8,7 @@ export : define [buildGsubThousands gsub para] : begin
 	define numberGlyphIDs {
 		'zero.lnum' 'one.lnum' 'two.lnum' 'three.lnum' 'four.lnum'
 		'five.lnum' 'six.lnum' 'seven.lnum' 'eight.lnum' 'nine.lnum'
-		'turnDigitTwo' 'turnDigitThree'
+		'turnTwo' 'turnThree'
 		'sezimalDigitZero.lnum' 'sezimalDigitOne.lnum' 'sezimalDigitTwo.lnum'
 		'sezimalDigitThree.lnum' 'sezimalDigitFour.lnum' 'sezimalDigitFive.lnum'
 	}
