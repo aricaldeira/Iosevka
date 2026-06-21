@@ -6192,8 +6192,8 @@ selector."cyrl/Ghe" = "serifless"
 selector."cyrl/ghe.upright" = "serifless"
 selector."cyrl/Ge" = "serifless"
 selector."cyrl/ge" = "serifless"
-selector."cyrl/EnGhe/GhePart" = "serifless"
-selector."cyrl/enghe/ghePart" = "serifless"
+selector."cyrl/EnGhe/Ghe" = "serifless"
+selector."cyrl/enghe/ghe" = "serifless"
 
 [prime.capital-gamma.variants.top-right-serifed]
 rank = 2
@@ -6204,8 +6204,8 @@ selector."cyrl/Ghe" = "topRightSerifed"
 selector."cyrl/ghe.upright" = "topRightSerifed"
 selector."cyrl/Ge" = "serifless"
 selector."cyrl/ge" = "serifless"
-selector."cyrl/EnGhe/GhePart" = "topRightSerifed"
-selector."cyrl/enghe/ghePart" = "topRightSerifed"
+selector."cyrl/EnGhe/Ghe" = "topRightSerifed"
+selector."cyrl/enghe/ghe" = "topRightSerifed"
 
 [prime.capital-gamma.variants.bottom-serifed]
 rank = 3
@@ -6216,8 +6216,8 @@ selector."cyrl/Ghe" = "bottomSerifed"
 selector."cyrl/ghe.upright" = "serifless"
 selector."cyrl/Ge" = "bottomSerifed"
 selector."cyrl/ge" = "serifless"
-selector."cyrl/EnGhe/GhePart" = "serifless"
-selector."cyrl/enghe/ghePart" = "serifless"
+selector."cyrl/EnGhe/Ghe" = "serifless"
+selector."cyrl/enghe/ghe" = "serifless"
 
 [prime.capital-gamma.variants.serifed]
 rank = 4
@@ -6228,8 +6228,8 @@ selector."cyrl/Ghe" = "serifed"
 selector."cyrl/ghe.upright" = "serifed"
 selector."cyrl/Ge" = "serifed"
 selector."cyrl/ge" = "serifed"
-selector."cyrl/EnGhe/GhePart" = "topRightSerifed"
-selector."cyrl/enghe/ghePart" = "topRightSerifed"
+selector."cyrl/EnGhe/Ghe" = "topRightSerifed"
+selector."cyrl/enghe/ghe" = "topRightSerifed"
 
 
 
@@ -8581,25 +8581,25 @@ selector."cyrl/che" = "tailed"
 rank = 1
 selector."cyrl/Yer"  = "corner"
 selector."cyrl/Yeri" = "corner"
-selector."cyrl/Nje/rightHalf"  = "corner"
-selector."cyrl/Lje"  = "corner"
-selector."cyrl/Tje/rightHalf"  = "corner"
+selector."cyrl/Nje/rightHalf" = "corner"
+selector."cyrl/Lje/rightHalf" = "corner"
+selector."cyrl/Tje/rightHalf" = "corner"
 
 [prime.cyrl-capital-yeri.variants.round]
 rank = 2
 selector."cyrl/Yer"  = "round"
 selector."cyrl/Yeri" = "round"
-selector."cyrl/Nje/rightHalf"  = "round"
-selector."cyrl/Lje"  = "round"
-selector."cyrl/Tje/rightHalf"  = "round"
+selector."cyrl/Nje/rightHalf" = "round"
+selector."cyrl/Lje/rightHalf" = "round"
+selector."cyrl/Tje/rightHalf" = "round"
 
 [prime.cyrl-capital-yeri.variants.cursive]
 rank = 3
 selector."cyrl/Yer"  = "cursive"
 selector."cyrl/Yeri" = "cursive"
-selector."cyrl/Nje/rightHalf"  = "cursive"
-selector."cyrl/Lje"  = "cursive"
-selector."cyrl/Tje/rightHalf"  = "cursive"
+selector."cyrl/Nje/rightHalf" = "cursive"
+selector."cyrl/Lje/rightHalf" = "cursive"
+selector."cyrl/Tje/rightHalf" = "cursive"
 
 
 
@@ -8613,8 +8613,8 @@ rank = 1
 description = "Cyrillic Lower Yeri (`ь`) with corner at bottom left"
 selector."cyrl/yer"  = "corner"
 selector."cyrl/yeri" = "corner"
-selector."cyrl/nje/rightHalf"  = "corner"
-selector."cyrl/lje"  = "corner"
+selector."cyrl/nje/rightHalf" = "corner"
+selector."cyrl/lje/rightHalf" = "corner"
 selector."cyrl/tje/rightHalf" = "corner"
 
 [prime.cyrl-yeri.variants.round]
@@ -8622,8 +8622,8 @@ rank = 2
 description = "Cyrillic Lower Yeri (`ь`) with rounded shape"
 selector."cyrl/yer"  = "round"
 selector."cyrl/yeri" = "round"
-selector."cyrl/nje/rightHalf"  = "round"
-selector."cyrl/lje"  = "round"
+selector."cyrl/nje/rightHalf" = "round"
+selector."cyrl/lje/rightHalf" = "round"
 selector."cyrl/tje/rightHalf" = "round"
 
 [prime.cyrl-yeri.variants.cursive]
@@ -8631,8 +8631,8 @@ rank = 3
 description = "Cyrillic Lower Yeri (`ь`) with cursive shape"
 selector."cyrl/yer"  = "cursive"
 selector."cyrl/yeri" = "cursive"
-selector."cyrl/nje/rightHalf"  = "cursive"
-selector."cyrl/lje"  = "cursive"
+selector."cyrl/nje/rightHalf" = "cursive"
+selector."cyrl/lje/rightHalf" = "cursive"
 selector."cyrl/tje/rightHalf" = "cursive"
 
 
@@ -9263,6 +9263,7 @@ descriptionAffix = "five-pointed shape"
 selectorAffix.asterisk = "penta"
 selectorAffix."asterisk/slashTop" = "penta"
 selectorAffix."asterisk/sMid" = "penta"
+selectorAffix."asterisk/halfXH" = "penta"
 selectorAffix."asterisk/slashBot" = "penta"
 selectorAffix.opAsterisk = "penta"
 selectorAffix.flower = ""
@@ -9274,6 +9275,7 @@ descriptionAffix = "turned five-pointed shape"
 selectorAffix.asterisk = "turnPenta"
 selectorAffix."asterisk/slashTop" = "turnPenta"
 selectorAffix."asterisk/sMid" = "turnPenta"
+selectorAffix."asterisk/halfXH" = "turnPenta"
 selectorAffix."asterisk/slashBot" = "turnPenta"
 selectorAffix.opAsterisk = "turnPenta"
 selectorAffix.flower = ""
@@ -9285,6 +9287,7 @@ descriptionAffix = "six-pointed shape"
 selectorAffix.asterisk = "hex"
 selectorAffix."asterisk/slashTop" = "hex"
 selectorAffix."asterisk/sMid" = "hex"
+selectorAffix."asterisk/halfXH" = "hex"
 selectorAffix."asterisk/slashBot" = "hex"
 selectorAffix.opAsterisk = "hex"
 selectorAffix.flower = ""
@@ -9296,6 +9299,7 @@ descriptionAffix = "turned six-pointed shape"
 selectorAffix.asterisk = "turnHex"
 selectorAffix."asterisk/slashTop" = "turnHex"
 selectorAffix."asterisk/sMid" = "turnHex"
+selectorAffix."asterisk/halfXH" = "turnHex"
 selectorAffix."asterisk/slashBot" = "turnHex"
 selectorAffix.opAsterisk = "turnHex"
 selectorAffix.flower = ""
@@ -9306,6 +9310,7 @@ descriptionAffix = "high position"
 selectorAffix.asterisk = "high"
 selectorAffix."asterisk/slashTop" = "ST"
 selectorAffix."asterisk/sMid" = "SMid"
+selectorAffix."asterisk/halfXH" = "halfXH"
 selectorAffix."asterisk/slashBot" = "SB"
 selectorAffix.opAsterisk = ""
 selectorAffix.flower = "high"
@@ -9316,6 +9321,7 @@ descriptionAffix = "medium position"
 selectorAffix.asterisk = "ST"
 selectorAffix."asterisk/slashTop" = "ST"
 selectorAffix."asterisk/sMid" = "SMid"
+selectorAffix."asterisk/halfXH" = "halfXH"
 selectorAffix."asterisk/slashBot" = "SB"
 selectorAffix.opAsterisk = ""
 selectorAffix.flower = "ST"
@@ -9326,6 +9332,7 @@ descriptionAffix = "low position"
 selectorAffix.asterisk = "SMid"
 selectorAffix."asterisk/slashTop" = "ST"
 selectorAffix."asterisk/sMid" = "SMid"
+selectorAffix."asterisk/halfXH" = "halfXH"
 selectorAffix."asterisk/slashBot" = "SB"
 selectorAffix.opAsterisk = ""
 selectorAffix.flower = "sMid"
@@ -9534,45 +9541,90 @@ selector."numberSign/cap" = "slantedOpen"
 sampler = "&"
 tagKind = "symbol"
 
-[prime.ampersand.variants.closed]
+[prime.ampersand.variants-buildup]
+entry = "body"
+descriptionLeader = "Ampersand (`&`)"
+
+[prime.ampersand.variants-buildup.stages.body.closed]
 rank = 1
-description = "Ampersand (`&`) with a closed contour"
-selector.ampersand = "closed"
+groupRank = 1
+next = "END"
+descriptionAffix = "closed contour"
+selectorAffix.ampersand = "closed"
 
-[prime.ampersand.variants.upper-open]
+[prime.ampersand.variants-buildup.stages.body.upper-open]
 rank = 2
-description = "Ampersand (`&`) with an open contour at upper half"
-selector.ampersand = "upperOpen"
+groupRank = 1
+next = "END"
+descriptionAffix = "open contour at upper half"
+selectorAffix.ampersand = "upperOpen"
 
-[prime.ampersand.variants.lower-open]
+[prime.ampersand.variants-buildup.stages.body.lower-open]
 rank = 3
-description = "Ampersand (`&`) with an open contour at lower half"
-selector.ampersand = "lowerOpen"
+groupRank = 1
+next = "END"
+descriptionAffix = "open contour at lower half"
+selectorAffix.ampersand = "lowerOpen"
 
-[prime.ampersand.variants.flat-top]
+[prime.ampersand.variants-buildup.stages.body.flat-top]
 rank = 4
-description = "Ampersand (`&`) drawn with a flat top"
-selector.ampersand = "flatTop"
+groupRank = 1
+next = "serifs"
+descriptionAffix = "flat top"
+selectorAffix.ampersand = "flatTop"
 
-[prime.ampersand.variants.et-toothed]
+[prime.ampersand.variants-buildup.stages.body.et]
 rank = 5
-description = "Ampersand (`&`) drawn like a ligature of Ɛ and t with tooth"
-selector.ampersand = "etToothed"
+groupRank = 2
+next = "terminal"
+descriptionAffix = "body shape drawn like a ligature of `Ɛ` and `t`"
+selectorAffix.ampersand = "et"
 
-[prime.ampersand.variants.et-toothless-corner]
-rank = 6
-description = "Ampersand (`&`) drawn like a ligature of Ɛ and t without tooth (corner)"
-selector.ampersand = "etToothlessCorner"
+[prime.ampersand.variants-buildup.stages.serifs."*"]
+next = "END"
 
-[prime.ampersand.variants.et-toothless-rounded]
-rank = 7
-description = "Ampersand (`&`) drawn like a ligature of Ɛ and t without tooth (rounded)"
-selector.ampersand = "etToothlessRounded"
+[prime.ampersand.variants-buildup.stages.serifs.serifless]
+rank = 1
+keyAffix = ""
+selectorAffix.ampersand = "serifless"
 
-[prime.ampersand.variants.et-tailed]
-rank = 8
-description = "Ampersand (`&`) drawn like a ligature of Ɛ and t with tail"
-selector.ampersand = "etTailed"
+[prime.ampersand.variants-buildup.stages.serifs.serifed]
+rank = 2
+nonBreakingVariantAdditionPriority = 20
+descriptionAffix = "serif at top-right"
+selectorAffix.ampersand = "serifed"
+
+[prime.ampersand.variants-buildup.stages.terminal."*"]
+next = "END"
+
+[prime.ampersand.variants-buildup.stages.terminal.toothed]
+rank = 1
+descriptionAffix = "tooth"
+selectorAffix.ampersand = "toothed"
+
+[prime.ampersand.variants-buildup.stages.terminal.tailed]
+rank = 2
+nonBreakingVariantAdditionPriority = 10
+descriptionAffix = "tail"
+selectorAffix.ampersand = "tailed"
+
+[prime.ampersand.variants-buildup.stages.terminal.flat-bottom]
+rank = 3
+nonBreakingVariantAdditionPriority = 10
+descriptionAffix = "flat bottom"
+selectorAffix.ampersand = "flatBottom"
+
+[prime.ampersand.variants-buildup.stages.terminal.toothless-corner]
+rank = 4
+descriptionAffix = "tooth (corner)"
+descriptionJoiner = "without"
+selectorAffix.ampersand = "toothlessCorner"
+
+[prime.ampersand.variants-buildup.stages.terminal.toothless-rounded]
+rank = 5
+descriptionAffix = "tooth (rounded)"
+descriptionJoiner = "without"
+selectorAffix.ampersand = "toothlessRounded"
 
 
 
