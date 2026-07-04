@@ -1027,6 +1027,7 @@ selector.HHookLeft = "serifless"
 selector.hCap = "serifless"
 selector."hCap/descBase" = "serifless"
 selector.hCapHookTop = "serifless"
+selector.hengCap = "serifless"
 
 [prime.capital-h.variants.top-left-serifed]
 rank = 2
@@ -1041,6 +1042,7 @@ selector.HHookLeft = "serifless"
 selector.hCap = "topLeftSerifed"
 selector."hCap/descBase" = "topLeftSerifed"
 selector.hCapHookTop = "serifless"
+selector.hengCap = "topLeftSerifed"
 
 [prime.capital-h.variants.top-left-bottom-right-serifed]
 rank = 3
@@ -1055,6 +1057,7 @@ selector.HHookLeft = "topLeftBottomRightSerifed"
 selector.hCap = "topLeftBottomRightSerifed"
 selector."hCap/descBase" = "topLeftSerifed"
 selector.hCapHookTop = "topLeftBottomRightSerifed"
+selector.hengCap = "topLeftSerifed"
 
 [prime.capital-h.variants.serifed]
 rank = 4
@@ -1069,6 +1072,7 @@ selector.HHookLeft = "serifed"
 selector.hCap = "serifed"
 selector."hCap/descBase" = "serifed"
 selector.hCapHookTop = "serifed"
+selector.hengCap = "serifed"
 
 
 
@@ -1723,21 +1727,21 @@ rank = 1
 description = "Serifless T"
 selector.T = "serifless"
 selector."T/sansSerif" = "serifless"
-selector."T/rtailBase" = "serifless"
+selector."T/rTailBase" = "serifless"
 
 [prime.capital-t.variants.motion-serifed]
 rank = 2
 description = "Motion-Serifed T"
 selector.T = "motionSerifed"
 selector."T/sansSerif" = "serifless"
-selector."T/rtailBase" = "motionSerifed"
+selector."T/rTailBase" = "motionSerifed"
 
 [prime.capital-t.variants.serifed]
 rank = 3
 description = "Serifed T"
 selector.T = "serifed"
 selector."T/sansSerif" = "serifless"
-selector."T/rtailBase" = "motionSerifed"
+selector."T/rTailBase" = "motionSerifed"
 
 
 
@@ -2426,7 +2430,7 @@ selectorAffix."a/doubleStorey" = "serifed"
 selectorAffix."aRetroflexHook/doubleStorey" = "serifless"
 selectorAffix."a/singleStorey/autoSerifed/slab" = { if = [{ storey = "double-storey" }], then = "doubleSerifed", else = "serifed" }
 selectorAffix."a/singleStorey/autoSerifed/sans" = "serifed"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = { if = [{ storey = "double-storey" }], then = "motionSerifed", else = "serifless" }
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = { if = [{ storey = "double-storey" }], then = "doubleSerifed", else = "serifless" }
 selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "serifless"
 selectorAffix."ae/a" = "toothlessRounded"
 
@@ -2436,13 +2440,13 @@ enableIf = [{ ear = "eared"}, { ear = "flat-top" }]
 descriptionAffix = "serifs at top and bottom"
 selectorAffix.a = "doubleSerifed"
 selectorAffix."a/sansSerif" = "serifless"
-selectorAffix."aRetroflexHook" = "motionSerifed"
+selectorAffix."aRetroflexHook" = "doubleSerifed"
 selectorAffix."a/doubleStorey" = "serifed"
 selectorAffix."aRetroflexHook/doubleStorey" = "serifless"
 selectorAffix."a/singleStorey/autoSerifed/slab" = "doubleSerifed"
 selectorAffix."a/singleStorey/autoSerifed/sans" = "doubleSerifed"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "motionSerifed"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "motionSerifed"
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "doubleSerifed"
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "doubleSerifed"
 selectorAffix."ae/a" = "toothlessRounded"
 
 [prime.a.variants-buildup.stages.bar.tailed]
@@ -2455,7 +2459,7 @@ selectorAffix."a/doubleStorey" = "tailed"
 selectorAffix."aRetroflexHook/doubleStorey" = "serifless"
 selectorAffix."a/singleStorey/autoSerifed/slab" = { if = [{ storey = "double-storey" }], then = "tailedSerifed", else = "tailed" }
 selectorAffix."a/singleStorey/autoSerifed/sans" = "tailed"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = { if = [{ storey = "double-storey" }], then = "motionSerifed", else = "serifless" }
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = { if = [{ storey = "double-storey" }], then = "doubleSerifed", else = "serifless" }
 selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "serifless"
 selectorAffix."ae/a" = "toothlessRounded"
 
@@ -2465,13 +2469,13 @@ enableIf = [{ ear = "eared"}, { ear = "flat-top" }]
 descriptionAffix = "curly tail; with serifs at top and bottom"
 selectorAffix.a = "tailedSerifed"
 selectorAffix."a/sansSerif" = "tailed"
-selectorAffix."aRetroflexHook" = "motionSerifed"
+selectorAffix."aRetroflexHook" = "doubleSerifed"
 selectorAffix."a/doubleStorey" = "tailed"
 selectorAffix."aRetroflexHook/doubleStorey" = "serifless"
 selectorAffix."a/singleStorey/autoSerifed/slab" = "tailedSerifed"
 selectorAffix."a/singleStorey/autoSerifed/sans" = "tailedSerifed"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "motionSerifed"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "motionSerifed"
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "doubleSerifed"
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "doubleSerifed"
 selectorAffix."ae/a" = "toothlessRounded"
 
 [prime.a.variants-buildup.stages.bar.flat-bottom-serifless]
@@ -2502,7 +2506,7 @@ selectorAffix."a/doubleStorey" = "flatBottomSerifed"
 selectorAffix."aRetroflexHook/doubleStorey" = "serifless"
 selectorAffix."a/singleStorey/autoSerifed/slab" = "doubleSerifed"
 selectorAffix."a/singleStorey/autoSerifed/sans" = "serifed"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "motionSerifed"
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "doubleSerifed"
 selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "serifless"
 selectorAffix."ae/a" = "toothlessRounded"
 
@@ -2517,7 +2521,7 @@ selectorAffix."a/doubleStorey" = "toothlessCorner"
 selectorAffix."aRetroflexHook/doubleStorey" = "serifless"
 selectorAffix."a/singleStorey/autoSerifed/slab" = "doubleSerifed"
 selectorAffix."a/singleStorey/autoSerifed/sans" = "serifless"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "motionSerifed"
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "doubleSerifed"
 selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "serifless"
 selectorAffix."ae/a" = "toothlessRounded"
 
@@ -2532,7 +2536,7 @@ selectorAffix."a/doubleStorey" = "toothlessRounded"
 selectorAffix."aRetroflexHook/doubleStorey" = "serifless"
 selectorAffix."a/singleStorey/autoSerifed/slab" = "doubleSerifed"
 selectorAffix."a/singleStorey/autoSerifed/sans" = "serifless"
-selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "motionSerifed"
+selectorAffix."aRetroflexHook/singleStorey/autoSerifed/slab" = "doubleSerifed"
 selectorAffix."aRetroflexHook/singleStorey/autoSerifed/sans" = "serifless"
 selectorAffix."ae/a" = "toothlessRounded"
 
@@ -3301,6 +3305,7 @@ description = "`i` like a straight line"
 selector.dotlessi = "serifless"
 selector."dotlessi/sansSerif" = "serifless"
 selector."dotlessi/compLigRight" = "hooky"
+selector."latn/iota" = "flatTailed"
 selector."cyrl/ghe.SRB" = "flatTailed"
 
 [prime.i.variants.hooky]
@@ -3310,6 +3315,7 @@ description = "Hooky `i`"
 selector.dotlessi = "hooky"
 selector."dotlessi/sansSerif" = "serifless"
 selector."dotlessi/compLigRight" = "hooky"
+selector."latn/iota" = "serifedFlatTailed"
 selector."cyrl/ghe.SRB" = "serifedFlatTailed"
 
 [prime.i.variants.hooky-bottom]
@@ -3319,6 +3325,7 @@ description = "`i` with a sharp-turning horizontal tail"
 selector.dotlessi = "hookyBottom"
 selector."dotlessi/sansSerif" = "serifless"
 selector."dotlessi/compLigRight" = "zshaped"
+selector."latn/iota" = "flatTailed"
 selector."cyrl/ghe.SRB" = "hookyBottom"
 
 [prime.i.variants.zshaped]
@@ -3328,6 +3335,7 @@ description = "Z-shaped `i`"
 selector.dotlessi = "zshaped"
 selector."dotlessi/sansSerif" = "serifless"
 selector."dotlessi/compLigRight" = "zshaped"
+selector."latn/iota" = "serifedFlatTailed"
 selector."cyrl/ghe.SRB" = "zshaped"
 
 [prime.i.variants.serifed]
@@ -3337,6 +3345,7 @@ description = "Serifed `i`"
 selector.dotlessi = "serifed"
 selector."dotlessi/sansSerif" = "serifless"
 selector."dotlessi/compLigRight" = "serifed"
+selector."latn/iota" = "serifedFlatTailed"
 selector."cyrl/ghe.SRB" = "zshaped"
 
 [prime.i.variants.serifed-asymmetric]
@@ -3346,6 +3355,7 @@ description = "`i` with shorter top serif and full bottom serif"
 selector.dotlessi = "serifedAsymmetric"
 selector."dotlessi/sansSerif" = "serifless"
 selector."dotlessi/compLigRight" = "serifed"
+selector."latn/iota" = "serifedFlatTailed"
 selector."cyrl/ghe.SRB" = "zshapedAsymmetric"
 
 [prime.i.variants.tailed]
@@ -3355,6 +3365,7 @@ description = "`i` with curly tail"
 selector.dotlessi = "tailed"
 selector."dotlessi/sansSerif" = "tailed"
 selector."dotlessi/compLigRight" = "tailedSerifed"
+selector."latn/iota" = "tailed"
 selector."cyrl/ghe.SRB" = "tailed"
 
 [prime.i.variants.tailed-serifed]
@@ -3364,6 +3375,7 @@ description = "`i` with top serif and curly tail"
 selector.dotlessi = "tailedSerifed"
 selector."dotlessi/sansSerif" = "tailed"
 selector."dotlessi/compLigRight" = "tailedSerifed"
+selector."latn/iota" = "tailedSerifed"
 selector."cyrl/ghe.SRB" = "tailedSerifed"
 
 [prime.i.variants.flat-tailed]
@@ -3373,6 +3385,7 @@ description = "`i` with curly-then-flat tail"
 selector.dotlessi = "flatTailed"
 selector."dotlessi/sansSerif" = "flatTailed"
 selector."dotlessi/compLigRight" = "serifedFlatTailed"
+selector."latn/iota" = "flatTailed"
 selector."cyrl/ghe.SRB" = "flatTailed"
 
 [prime.i.variants.serifed-flat-tailed]
@@ -3382,6 +3395,7 @@ description = "`i` with top serif and curly-then-flat tail"
 selector.dotlessi = "serifedFlatTailed"
 selector."dotlessi/sansSerif" = "flatTailed"
 selector."dotlessi/compLigRight" = "serifedFlatTailed"
+selector."latn/iota" = "serifedFlatTailed"
 selector."cyrl/ghe.SRB" = "serifedFlatTailed"
 
 [prime.i.variants.diagonal-tailed]
@@ -3391,6 +3405,7 @@ description = "`i` with diagonal tail"
 selector.dotlessi = "diagonalTailed"
 selector."dotlessi/sansSerif" = "diagonalTailed"
 selector."dotlessi/compLigRight" = "serifedDiagonalTailed"
+selector."latn/iota" = "diagonalTailed"
 selector."cyrl/ghe.SRB" = "diagonalTailed"
 
 [prime.i.variants.serifed-diagonal-tailed]
@@ -3400,6 +3415,7 @@ description = "`i` with top serif and diagonal tail"
 selector.dotlessi = "serifedDiagonalTailed"
 selector."dotlessi/sansSerif" = "diagonalTailed"
 selector."dotlessi/compLigRight" = "serifedDiagonalTailed"
+selector."latn/iota" = "serifedDiagonalTailed"
 selector."cyrl/ghe.SRB" = "serifedDiagonalTailed"
 
 [prime.i.variants.semi-tailed]
@@ -3409,6 +3425,7 @@ description = "`i` with slightly curly tail"
 selector.dotlessi = "semiTailed"
 selector."dotlessi/sansSerif" = "semiTailed"
 selector."dotlessi/compLigRight" = "serifedSemiTailed"
+selector."latn/iota" = "semiTailed"
 selector."cyrl/ghe.SRB" = "semiTailed"
 
 [prime.i.variants.serifed-semi-tailed]
@@ -3418,6 +3435,7 @@ description = "`i` with top serif and slightly curly tail"
 selector.dotlessi = "serifedSemiTailed"
 selector."dotlessi/sansSerif" = "semiTailed"
 selector."dotlessi/compLigRight" = "serifedSemiTailed"
+selector."latn/iota" = "serifedSemiTailed"
 selector."cyrl/ghe.SRB" = "serifedSemiTailed"
 
 
@@ -6413,84 +6431,72 @@ rank = 1
 description = "Greek lower Iota (`ι`) like a straight line"
 selector."grek/iota" = "serifless"
 selector."grek/iota/sansSerif" = "serifless"
-selector."latn/iota" = "flatTailed"
 
 [prime.lower-iota.variants.tailless-serifed]
 rank = 2
 description = "Greek lower Iota (`ι`) like a straight line with top serif"
 selector."grek/iota" = "hooky"
 selector."grek/iota/sansSerif" = "serifless"
-selector."latn/iota" = "serifedFlatTailed"
 
 [prime.lower-iota.variants.hooky-bottom]
 rank = 3
 description = "Greek lower Iota (`ι`) with a sharp-turning horizontal tail"
 selector."grek/iota" = "hookyBottom"
 selector."grek/iota/sansSerif" = "serifless"
-selector."latn/iota" = "flatTailed"
 
 [prime.lower-iota.variants.zshaped]
 rank = 4
 description = "Z-shaped Greek lower Iota (`ι`)"
 selector."grek/iota" = "zshaped"
 selector."grek/iota/sansSerif" = "serifless"
-selector."latn/iota" = "serifedFlatTailed"
 
 [prime.lower-iota.variants.tailed]
 rank = 5
 description = "Greek lower Iota (`ι`) with curly tail"
 selector."grek/iota" = "tailed"
 selector."grek/iota/sansSerif" = "tailed"
-selector."latn/iota" = "tailed"
 
 [prime.lower-iota.variants.tailed-serifed]
 rank = 6
 description = "Greek lower Iota (`ι`) with top serif and curly tail"
 selector."grek/iota" = "tailedSerifed"
 selector."grek/iota/sansSerif" = "tailed"
-selector."latn/iota" = "tailedSerifed"
 
 [prime.lower-iota.variants.flat-tailed]
 rank = 7
 description = "Greek lower Iota (`ι`) with a curly-then-flat tail"
 selector."grek/iota" = "flatTailed"
 selector."grek/iota/sansSerif" = "flatTailed"
-selector."latn/iota" = "flatTailed"
 
 [prime.lower-iota.variants.serifed-flat-tailed]
 rank = 8
 description = "Greek lower Iota (`ι`) with top serif and a curly-then-flat tail"
 selector."grek/iota" = "serifedFlatTailed"
 selector."grek/iota/sansSerif" = "flatTailed"
-selector."latn/iota" = "serifedFlatTailed"
 
 [prime.lower-iota.variants.diagonal-tailed]
 rank = 9
 description = "Greek lower Iota (`ι`) with a diagonal tail"
 selector."grek/iota" = "diagonalTailed"
 selector."grek/iota/sansSerif" = "diagonalTailed"
-selector."latn/iota" = "diagonalTailed"
 
 [prime.lower-iota.variants.serifed-diagonal-tailed]
 rank = 10
 description = "Greek lower Iota (`ι`) with top serif and a diagonal tail"
 selector."grek/iota" = "serifedDiagonalTailed"
 selector."grek/iota/sansSerif" = "diagonalTailed"
-selector."latn/iota" = "serifedDiagonalTailed"
 
 [prime.lower-iota.variants.semi-tailed]
 rank = 11
 description = "Greek lower Iota (`ι`) with a slightly curly tail"
 selector."grek/iota" = "semiTailed"
 selector."grek/iota/sansSerif" = "semiTailed"
-selector."latn/iota" = "semiTailed"
 
 [prime.lower-iota.variants.serifed-semi-tailed]
 rank = 12
 description = "Greek lower Iota (`ι`) with top serif and a slightly curly tail"
 selector."grek/iota" = "serifedSemiTailed"
 selector."grek/iota/sansSerif" = "semiTailed"
-selector."latn/iota" = "serifedSemiTailed"
 
 
 
@@ -10226,7 +10232,7 @@ capital-delta = "straight"
 lower-delta = "rounded"
 lower-eta = "serifless"
 lower-theta = "oval"
-lower-iota = "serifed-semi-tailed"
+lower-iota = "serifed-flat-tailed"
 lower-kappa = "straight-serifless"
 capital-lambda = "straight-serifless"
 lower-lambda = "straight"
@@ -10234,7 +10240,7 @@ lower-mu = "tailed-serifless"
 lower-nu = "casual"
 lower-xi = "flat-top"
 lower-pi = "tailed"
-lower-tau = "semi-tailed"
+lower-tau = "flat-tailed"
 lower-upsilon = "casual-serifless"
 lower-phi = "cursive"
 lower-chi = "straight-serifless"

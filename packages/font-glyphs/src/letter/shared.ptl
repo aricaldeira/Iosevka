@@ -880,7 +880,7 @@ glyph-block Letter-Shared-Shapes : begin
 				curl (cx + sign * (dxTailStart + dxDepth)) (cy + O + dyTailStart + dyDepth)
 
 		export : define [R cx cy depth sw] : begin
-			define rInY : 1 * DefaultTightBendInnerRadius
+			define rInY : 1 * TightBendInnerRadius
 			define innerX : cx + [HSwToV : 0.5 * sw]
 			return : list
 				curl innerX (cy + [FineSw sw] + rInY) [widths.rhs sw]
@@ -888,7 +888,7 @@ glyph-block Letter-Shared-Shapes : begin
 				F (+1) innerX cy rInY DiagTailAngle depth sw
 
 		export : define [L cx cy depth sw] : begin
-			define rInY : 1 * DefaultTightBendInnerRadius
+			define rInY : 1 * TightBendInnerRadius
 			define innerX : cx - [HSwToV : 0.5 * sw]
 			return : list
 				curl innerX (cy + [FineSw sw] + rInY) [widths.lhs sw]
@@ -929,8 +929,10 @@ glyph-block Letter-Shared-Shapes : begin
 			local rBarCenter : right - 0.5 * ink
 			local rBarInner  : right - 1.0 * ink
 
-			set this.jut     jut
-			set this.sideJut sideJut
+			set this.jut       jut
+			set this.jutIn     jutIn
+			set this.sideJut   sideJut
+			set this.sideJutIn sideJutIn
 
 			set this.enoughSpaceForFullSerifs : 0.5 * ink + 0.375 * gap > para.refJut
 
