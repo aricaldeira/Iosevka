@@ -261,8 +261,6 @@ glyph-block Letter-Cyrillic-Che : begin
 			include : LeaningAnchor.Below.VBar.r RightSB
 			include : CyrCheShape [DivFrame 1] CAP 0.45 BODY.STRAIGHT SERIFS.NONE
 
-	glyph-block-import Letter-Shared : CreateAccentedComposition
-
 	CreateAccentedComposition 'niftimalDigitSeven.lnum' 0xF1E07 'sezimalDigitOne.lnum' 'dotAbove'
 	CreateAccentedComposition 'niftimalDigitDozenOne.lnum' 0xF1E0D 'sezimalDigitOne.lnum' 'dieresisAbove'
 	CreateAccentedComposition 'niftimalDigitThirsyOne.lnum' 0xF1E13 'sezimalDigitOne.lnum' 'ringAbove'
