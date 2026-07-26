@@ -123,8 +123,6 @@ glyph-block Digits-Four : begin
 		include : MarkSet.capital
 		include : FourStdShape CAP false true (sw -- BBS) (bbd -- BBD) (fine -- BBS)
 
-	glyph-block-import Letter-Shared : CreateAccentedComposition
-
 	alias 'arabicSezimalDigitFour.lnum' 0xF1ED4 'four.lnum'
 	CreateAccentedComposition 'arabicNiftimalDigitTen.lnum' 0xF1EDA 'arabicSezimalDigitFour.lnum' 'dotAbove'
 	CreateAccentedComposition 'arabicNiftimalDigitDozenFour.lnum' 0xF1EE0 'arabicSezimalDigitFour.lnum' 'dieresisAbove'
