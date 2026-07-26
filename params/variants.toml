@@ -2886,7 +2886,6 @@ selectorAffix."f/compLigLeft1" = "flatHookCLC1"
 selectorAffix."f/compLigLeft2" = "flatHookCLC2"
 selectorAffix."f/compLigLeft3" = "flatHookCLC3"
 selectorAffix."f/compLigLeft4" = "flatHookCLC4"
-selectorAffix."f/tailless" = ""
 selectorAffix.fLenis = ""
 selectorAffix.fHookBottom = ""
 
@@ -2901,7 +2900,6 @@ selectorAffix."f/compLigLeft1" = "flatHookCLC1"
 selectorAffix."f/compLigLeft2" = "flatHookCLC2"
 selectorAffix."f/compLigLeft3" = "flatHookCLC3"
 selectorAffix."f/compLigLeft4" = "flatHookCLC4"
-selectorAffix."f/tailless" = "narrow"
 selectorAffix.fLenis = "narrow"
 selectorAffix.fHookBottom = "narrow"
 
@@ -2915,7 +2913,6 @@ selectorAffix."f/compLigLeft1" = "flatHookCLC1"
 selectorAffix."f/compLigLeft2" = "flatHookCLC2"
 selectorAffix."f/compLigLeft3" = "flatHookCLC3"
 selectorAffix."f/compLigLeft4" = "flatHookCLC4"
-selectorAffix."f/tailless" = "flatHook"
 selectorAffix.fLenis = "flatHook"
 selectorAffix.fHookBottom = "flatHook"
 
@@ -2933,7 +2930,6 @@ selectorAffix."f/compLigLeft1" = "serifless"
 selectorAffix."f/compLigLeft2" = "serifless"
 selectorAffix."f/compLigLeft3" = "serifless"
 selectorAffix."f/compLigLeft4" = "serifless"
-selectorAffix."f/tailless" = "serifless"
 selectorAffix.fLenis = "serifless"
 selectorAffix.fHookBottom = "tailed"
 
@@ -2947,8 +2943,7 @@ selectorAffix."f/compLigLeft1" = "serifed"
 selectorAffix."f/compLigLeft2" = "serifed"
 selectorAffix."f/compLigLeft3" = "serifed"
 selectorAffix."f/compLigLeft4" = "serifed"
-selectorAffix."f/tailless" = "serifed"
-selectorAffix.fLenis = "serifless"
+selectorAffix.fLenis = "serifed"
 selectorAffix.fHookBottom = "tailed"
 
 [prime.f.variants-buildup.stages.tail.extended]
@@ -2961,7 +2956,6 @@ selectorAffix."f/compLigLeft1" = "extended"
 selectorAffix."f/compLigLeft2" = "extended"
 selectorAffix."f/compLigLeft3" = "extended"
 selectorAffix."f/compLigLeft4" = "extended"
-selectorAffix."f/tailless" = "serifless"
 selectorAffix.fLenis = "serifless"
 selectorAffix.fHookBottom = "tailed"
 
@@ -2975,7 +2969,6 @@ selectorAffix."f/compLigLeft1" = "tailed"
 selectorAffix."f/compLigLeft2" = "tailed"
 selectorAffix."f/compLigLeft3" = "tailed"
 selectorAffix."f/compLigLeft4" = "tailed"
-selectorAffix."f/tailless" = "serifless"
 selectorAffix.fLenis = "serifless"
 selectorAffix.fHookBottom = "tailed"
 
@@ -2989,7 +2982,6 @@ selectorAffix."f/compLigLeft1" = "diagonalTailed"
 selectorAffix."f/compLigLeft2" = "diagonalTailed"
 selectorAffix."f/compLigLeft3" = "diagonalTailed"
 selectorAffix."f/compLigLeft4" = "diagonalTailed"
-selectorAffix."f/tailless" = "serifless"
 selectorAffix.fLenis = "serifless"
 selectorAffix.fHookBottom = "tailed"
 
@@ -3003,7 +2995,6 @@ selectorAffix."f/compLigLeft1" = "crossbarAtXHeight"
 selectorAffix."f/compLigLeft2" = "crossbarAtXHeight"
 selectorAffix."f/compLigLeft3" = ""
 selectorAffix."f/compLigLeft4" = ""
-selectorAffix."f/tailless" = ""
 selectorAffix.fLenis = ""
 selectorAffix.fHookBottom = ""
 
@@ -3017,7 +3008,6 @@ selectorAffix."f/compLigLeft1" = "crossbarAtXHeight"
 selectorAffix."f/compLigLeft2" = "crossbarAtXHeight"
 selectorAffix."f/compLigLeft3" = "crossbarAtXHeight"
 selectorAffix."f/compLigLeft4" = "crossbarAtXHeight"
-selectorAffix."f/tailless" = "crossbarAtXHeight"
 selectorAffix.fLenis = "crossbarAtXHeight"
 selectorAffix.fHookBottom = "crossbarAtXHeight"
 
@@ -3032,7 +3022,6 @@ selectorAffix."f/compLigLeft1" = "crossbarAtXHeight"
 selectorAffix."f/compLigLeft2" = "crossbarAtXHeight"
 selectorAffix."f/compLigLeft3" = "crossbarAtHalfAscenderHeight"
 selectorAffix."f/compLigLeft4" = "crossbarAtHalfAscenderHeight"
-selectorAffix."f/tailless" = "crossbarAtHalfAscenderHeight"
 selectorAffix.fLenis = "crossbarAtHalfAscenderHeight"
 selectorAffix.fHookBottom = "crossbarAtHalfAscenderHeight"
 
@@ -3056,8 +3045,8 @@ selectorAffix."g/hookTopBase" = "singleStoreyBentHookSerifless"
 selectorAffix."g/doubleStorey" = "doubleStorey"
 selectorAffix."g/singleStorey/autoSerifed/slab" = "singleStoreyBentHookSerifed"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "singleStoreyBentHookSerifless"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "singleStoreyBentHookSerifed"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "singleStoreyBentHookSerifless"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "singleStoreyBentHookSerifed"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "singleStoreyBentHookSerifless"
 
 [prime.g.variants-buildup.stages.openness."*"]
 next = "END"
@@ -3071,8 +3060,8 @@ selectorAffix."g/hookTopBase" = ""
 selectorAffix."g/doubleStorey" = "closed"
 selectorAffix."g/singleStorey/autoSerifed/slab" = ""
 selectorAffix."g/singleStorey/autoSerifed/sans" = ""
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = ""
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = ""
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = ""
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = ""
 
 [prime.g.variants-buildup.stages.openness.open]
 rank = 1
@@ -3083,8 +3072,8 @@ selectorAffix."g/hookTopBase" = ""
 selectorAffix."g/doubleStorey" = "open"
 selectorAffix."g/singleStorey/autoSerifed/slab" = ""
 selectorAffix."g/singleStorey/autoSerifed/sans" = ""
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = ""
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = ""
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = ""
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = ""
 
 [prime.g.variants-buildup.stages.storey.single-storey]
 next = "hook"
@@ -3096,8 +3085,8 @@ selectorAffix."g/hookTopBase" = "singleStorey"
 selectorAffix."g/doubleStorey" = "doubleStoreyClosed"
 selectorAffix."g/singleStorey/autoSerifed/slab" = "singleStorey"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "singleStorey"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "singleStorey"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "singleStorey"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "singleStorey"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "singleStorey"
 
 [prime.g.variants-buildup.stages.hook."*"]
 next = "ear"
@@ -3111,8 +3100,8 @@ selectorAffix."g/hookTopBase" = "bentHook"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "bentHook"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "bentHook"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "bentHook"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "bentHook"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "bentHook"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "bentHook"
 
 [prime.g.variants-buildup.stages.hook.flat-hook]
 rank = 2
@@ -3123,8 +3112,8 @@ selectorAffix."g/hookTopBase" = "flatHook"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "flatHook"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "flatHook"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "bentHook"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "bentHook"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "bentHook"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "bentHook"
 
 [prime.g.variants-buildup.stages.ear.serifless]
 rank = 1
@@ -3134,8 +3123,8 @@ selectorAffix."g/hookTopBase" = "serifless"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "serifless"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "serifless"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "serifless"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "serifless"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "serifless"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "serifless"
 
 [prime.g.variants-buildup.stages.ear.serifed]
 rank = 2
@@ -3146,8 +3135,8 @@ selectorAffix."g/hookTopBase" = "serifless"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "serifed"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "serifed"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "serifed"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "serifed"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "serifed"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "serifed"
 
 [prime.g.variants-buildup.stages.ear.top-cut]
 rank = 3
@@ -3158,8 +3147,8 @@ selectorAffix."g/hookTopBase" = "serifless"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "topCut"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "topCut"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "topCut"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "topCut"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "topCut"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "topCut"
 
 [prime.g.variants-buildup.stages.ear.flat-top-serifless]
 rank = 4
@@ -3171,8 +3160,8 @@ selectorAffix."g/hookTopBase" = "flatTopSerifless"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "flatTopSerifless"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "flatTopSerifless"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "flatTopSerifless"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "flatTopSerifless"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "flatTopSerifless"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "flatTopSerifless"
 
 [prime.g.variants-buildup.stages.ear.flat-top-serifed]
 rank = 5
@@ -3184,8 +3173,8 @@ selectorAffix."g/hookTopBase" = "flatTopSerifless"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "flatTopSerifed"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "flatTopSerifed"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "flatTopSerifed"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "flatTopSerifed"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "flatTopSerifed"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "flatTopSerifed"
 
 [prime.g.variants-buildup.stages.ear.earless-corner]
 rank = 6
@@ -3196,8 +3185,8 @@ selectorAffix."g/hookTopBase" = "earlessCornerHTB"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "earlessCorner"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "earlessCorner"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "earlessCorner"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "earlessCorner"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "earlessCorner"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "earlessCorner"
 
 [prime.g.variants-buildup.stages.ear.earless-rounded]
 rank = 7
@@ -3208,8 +3197,8 @@ selectorAffix."g/hookTopBase" = "serifless"
 selectorAffix."g/doubleStorey" = ""
 selectorAffix."g/singleStorey/autoSerifed/slab" = "earlessRounded"
 selectorAffix."g/singleStorey/autoSerifed/sans" = "earlessRounded"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/slab" = "earlessRounded"
-selectorAffix."g/singleStoreyBentHook/autoSerifed/sans" = "earlessRounded"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/slab" = "earlessRounded"
+selectorAffix."gCrossedTail/singleStorey/autoSerifed/sans" = "earlessRounded"
 
 
 
